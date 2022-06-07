@@ -15,11 +15,11 @@
     <meta name="keyword" content="청와대, 국민 품으로" />
     <meta name="author" content="청와대, 국민 품으로" />
 
-    <meta property="og:type" content="website" />
+    <!-- <meta property="og:type" content="website" />
     <meta property="og:site_name" content="청와대, 국민 품으로" />
     <meta property="og:title" content="청와대, 국민 품으로" />
     <meta property="og:url" content="" />
-    <meta property="og:description" content="청와대, 국민 품으로" />
+    <meta property="og:description" content="청와대, 국민 품으로" /> -->
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>청와대, 국민 품으로</title>
