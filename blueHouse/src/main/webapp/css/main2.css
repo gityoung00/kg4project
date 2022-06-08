@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* 개방의 의미 */ 
+.opening2_wrap .txt_box strong {
+    font-size: 3.7rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4rem;
+    font-family: "NotoSerif", Serif;
+}
+
+.main {
+
+    background-color: #A6A6A6;
+}
+
+.opening2_wrap .txt_box .s_txt {
+    color: #fff;
+    font-size: 2.2rem;
+    line-height: 3.4rem;
+    letter-spacing: -0.44px;
+}
+/* 역사*/
+.top_box:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    transform: translateX(-50%);
+    background: #DDEBF8;
+    z-index: -1;
+}
+
+/*header*/
+#header.fixed {
+	position: fixed
+}
+
+#header.active:before {
+	background: #DDDDDD;
+}
+
+#header.active {
+	background: #fff;
+}
+
+#header.active #logo .ov {
+	opacity: 1
+}
+
+#header.active #logo .n_ov {
+	opacity: 0
+}
+
+#header.active .h_dday {
+	color: #333;
+}
+
+#header.active #gnb1>ul>li>a {
+	color: #333333
+}
+
+#header.active #gnb2 .control, #header.active #gnb2 .global {
+	color: #333;
+}
+
+#header.on {
+	background: #fff;
+}
+
+#header.on:before {
+	background: #DDDDDD;
+}
+
+#header.on #logo .ov {
+	opacity: 1
+}
+
+#header.on #logo .n_ov {
+	opacity: 0;
+}
+
+#header.on #gnb1>ul>li>a {
+	color: #333333
+}
+
+#header.on #gnb2 .control, #header.on #gnb2 .global {
+	color: #A2A2A2;
+}
+
+#header.on .h_dday {
+	color: #333;
+}
+
+
+/*풋터*/
+#footer_section::before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    width: 200vw;
+    height: 100%;
+    transform: translateX(-50%);
+    content: '';
+    background-color: #2A2D34;
+}
+#footer_section {
+    display: block;
+    position: relative;
+    width: 142rem;
+    max-width: calc(100% - 2rem);
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 3.8rem 0;
+    color: #9fa4ad;
+    z-index: 2;
+}
+
+/*몸통*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #666;
+}
