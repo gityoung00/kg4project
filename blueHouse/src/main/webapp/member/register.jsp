@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>청와대 회원가입</title>
+<%@ include file="../header.jsp"%>
 <style>
 body {
 	margin: 0px;
@@ -32,10 +28,10 @@ body {
 	position: relative;
 	margin: auto;
 	background-color: #fff;
-	width: 730px;
+	width: 710px;
 	height: 750px;
 	overflow-x: hidden;
-	   overflow-y: auto;
+	overflow-y: auto;
 	 
 }
 
@@ -74,6 +70,11 @@ body {
 	height: 100px;
 }
 
+.register-input td {
+	width: 460px;
+	padding: 0 0 0 119px;
+}
+
 label {
 	font-weight: bold;
 	font-size: 17px;
@@ -95,7 +96,7 @@ input:focus {
 	outline: 1px solid #058CFF;
 }
 
-.register-cancel, .register-submit {
+input[type=submit], input[type=button] {
 	border: 0;
 	color: #ffffff;
 	font-weight: bold;
@@ -104,82 +105,72 @@ input:focus {
 	background-color: #058CFF;
 	width: 230px;
 	height: 60px;
+
 }
 
-.register-cancel {
+input[type=button] {
 	background-color: #ADADAD;
 }
+
 </style>
 <script src="register.js"></script>
-</head>
+<div id="member-page">
+	<div id="member-container">
+		<div id="member-block">
+			<div class="member-title">대한민국 청와대 회원가입</div>
+			<form action="registerSvc.jsp" method="post" id="f">
+				<table class="register-input">
+					<tr>
+						<td><label>아이디</label><br> <input
+							type="text" tabIndex="1" onkeydown="return tab(this, event)"
+							name="id" id="id" class="reigster-id" onchange="idCheck()"><br>
+							<span id="idAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>비밀번호</label><br> <input
+							type="password" tabIndex="2" onkeydown="return tab(this, event)"
+							name="pw" id="pw" class="register-pw" onchange="pwCheck()"><br>
+							<span id="pwAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>비밀번호 확인</label><br> <input
+							type="password" tabIndex="3" onkeydown="return tab(this, event)"
+							name="pwChk" id="pwChk" class="register-pw"
+							onchange="confirmCheck()"><br> <span id="pwChkAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>이름</label><br> <input type="text"
+							tabIndex="4" onkeydown="return tab(this, event)" name="name"
+							id="name" class="reigster-name" placeholder="홍길동"
+							onchange="nameCheck()"><br> <span id="nameAlert"></span>
+						</td>
+					</tr>
+					<tr>
+						<td><label>전화번호</label><br> <input
+							type="text" tabIndex="5" onkeydown="return tab(this, event)"
+							name="tel" id="tel" class="reigster-tel"
+							placeholder="01012340000" onchange="telCheck()"><br>
+							<span id="telAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>이메일</label><br> <input
+							type="text" tabIndex="6" onkeydown="return tab(this, event)"
+							name="email" id="email" class="reigster-email"
+							onchange="emailCheck()"><br> <span id="emailAlert"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" class="register-cancel" value="취소"
+							onclick="location.href='login.jsp'">
+							<input type="submit" class="register-submit" value="회원가입">
+						</td>
+					</tr>
+				</table>
+			</form>
 
-<body>
-	<div id="member-page">
-		<div id="member-container">
-			<div id="member-block">
-				<div class="member-title">대한민국 청와대 회원가입</div>
-				<form action="registerSvc.jsp" method="post" id="f">
-					<table class="register-input">
-						<tr>
-							<td colspan="2"><label>아이디</label><br> <input
-								type="text" tabIndex="1" onkeydown="return tab(this, event)"
-								name="id" id="id" class="reigster-id" onchange="idCheck()"><br>
-								<span id="idAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>비밀번호</label><br> <input
-								type="password" tabIndex="2" onkeydown="return tab(this, event)"
-								name="pw" id="pw" class="register-pw" onchange="pwCheck()"><br>
-								<span id="pwAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>비밀번호 확인</label><br> <input
-								type="password" tabIndex="3" onkeydown="return tab(this, event)"
-								name="pwChk" id="pwChk" class="register-pw"
-								onchange="confirmCheck()"><br> <span
-								id="pwChkAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>이름</label><br> <input
-								type="text" tabIndex="4" onkeydown="return tab(this, event)"
-								name="name" id="name" class="reigster-name" placeholder="홍길동"
-								onchange="nameCheck()"><br> <span id="nameAlert"></span>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>전화번호</label><br> <input
-								type="text" tabIndex="5" onkeydown="return tab(this, event)"
-								name="tel" id="tel" class="reigster-tel"
-								placeholder="01012340000" onchange="telCheck()"><br>
-								<span id="telAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>이메일</label><br> <input
-								type="text" tabIndex="6" onkeydown="return tab(this, event)"
-								name="email" id="email" class="reigster-email"
-								onchange="emailCheck()"><br> <span id="emailAlert"></span>
-							</td>
-						</tr>
-						<tr>
-							<td><input type="button" class="register-cancel" value="취소"
-								onclick="location.href='login.jsp'"></td>
-							<td><input type="submit" class="register-submit"
-								value="회원가입"></td>
-						</tr>
-					</table>
-				</form>
-
-
-
-
-
-
-
-			</div>
 		</div>
 	</div>
+</div>
 
-
-
-</body>
-</html>
+<%@include file="../footer.jsp" %>

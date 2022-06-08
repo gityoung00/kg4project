@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>청와대 회원 정보 수정</title>
-<style>
+<style>  
 body {
 	margin: 0px;
 }
