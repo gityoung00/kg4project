@@ -252,7 +252,7 @@
 					<!--<li><a href="https://20insu.go.kr/message" target="_blank">국민이 당선인에 바란다</a></li>-->
 				</ul>
 				<a href="" class="control close">전체 메뉴 닫기</a>
-			</nav>
+			</nav>    
 		</div>
 	</header>
 	<!-- header 끝 -->
