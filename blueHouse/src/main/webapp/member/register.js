@@ -26,7 +26,7 @@ function idCheck() {
 	msg.innerHTML = " ";
 	
 	
-	console.log(id);
+	/*console.log(id);*/
 	
 	if (!id) {
 		msg.style.color = "red";
@@ -41,6 +41,8 @@ function idCheck() {
 	}
 
 }
+
+
 function pwCheck() {
 	var pw = document.getElementById("pw").value;
 	var msg2 = document.getElementById('pwAlert');
@@ -50,7 +52,7 @@ function pwCheck() {
 	msg2.style.position = "relative";
 	msg2.style.left = "10px";
 	
-	console.log(pw);
+	/*console.log(pw);*/
 
 	if (pw == "") {
 		msg.style.color = "red";
@@ -77,8 +79,8 @@ function confirmCheck() {
 	msg.style.position = "relative";
 	msg.style.left = "10px";
 	
-	console.log(pw);
-	console.log(confirmPw);
+	/*console.log(pw);
+	console.log(confirmPw);*/
 	
 	if (confirmPw == "") {
 		msg.innerHTML = "필수 정보입니다.";
@@ -100,7 +102,7 @@ function nameCheck() {
 	msg.style.position = "relative";
 	msg.style.left = "10px";
 	
-	console.log(name);
+	/*console.log(name);*/
 	
 	if (name == "") {
 		msg.style.color = "red";
@@ -125,7 +127,7 @@ function telCheck() {
 	msg.style.position = "relative";
 	msg.style.left = "10px";
 	
-	console.log(tel);
+	/*console.log(tel);*/
 	
 	if (tel == "") {
 		msg.style.color = "red";
@@ -150,7 +152,7 @@ function emailCheck() {
 	msg.style.position = "relative";
 	msg.style.left = "10px";
 	
-	console.log(email);
+/*	console.log(email);*/
 	
 	if (email == "") {
 		msg.style.color = "red";
@@ -166,3 +168,20 @@ function emailCheck() {
 	msg.innerHTML = "";
 }
 
+function memberCheck() {
+	var msg1 = document.getElementById('idAlert').value;
+	var msg2 = document.getElementById('pwAlert').value;
+	var msg3 = document.getElementById('pwChkAlert').value;
+	var msg4 = document.getElementById('nameAlert').value;
+	var msg5 = document.getElementById('telAlert').value;
+	var msg6 = document.getElementById('emailAlert').value;
+	
+	consol.log(msg2);
+	
+	if(msg1 && msg2 && msg3 && msg4 && msg5 && msg6) {
+		alert('모든 입력 사항들을 채웠는지 확인해 주세요.');
+	}else {
+		document.getElementById('f').submit();
+	}
+	
+}

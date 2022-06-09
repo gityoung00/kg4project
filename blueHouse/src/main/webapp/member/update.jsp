@@ -1,11 +1,9 @@
+<%@page import="blueHouse.MemberDTO"%>
+<%@page import="blueHouse.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>청와대 회원 정보 수정</title>
-<style>  
+<%@ include file="../header.jsp"%>
+<style>
 body {
 	margin: 0px;
 }
@@ -18,24 +16,24 @@ body {
 
 #member-container {
 	position: relative;
-	top: 100px;
+	top: 15%;
 	margin: auto;
 	background-color: #fff;
 	width: 730px;
 	height: 750px;
 	border-radius: 9px;
 	box-shadow: 0 24px 57px -2px rgba(0, 0, 0, 0.3);
-	padding: 0 3px;
+	padding: 0 10px;
 }
 
 #member-block {
 	position: relative;
 	margin: auto;
 	background-color: #fff;
-	width: 730px;
+	width: 710px;
 	height: 750px;
 	overflow-x: hidden;
-	   overflow-y: auto;
+	overflow-y: auto;
 	 
 }
 
@@ -58,7 +56,7 @@ body {
 	font-size: 35px;
 	font-weight: bold;
 	position: relative;
-	left: 270px;
+	left: 175px;
 	top: 60px;
 }
 
@@ -67,15 +65,23 @@ body {
 	top: 80px;
 	margin: auto;
 	border: 0px;
+	padding-bottom: 30px;
 }
 
 .register-input tr {
 	height: 100px;
 }
 
+.register-input td {
+	width: 460px;
+	padding: 0 0 0 119px;
+}
+
 label {
 	font-weight: bold;
+	font-size: 17px;
 	color: #5D5D5D;
+	line-height: 30px;
 }
 
 input[type=text], input[type=password] {
@@ -92,7 +98,7 @@ input:focus {
 	outline: 1px solid #058CFF;
 }
 
-.register-cancel, .register-submit {
+input[type=submit], input[type=button] {
 	border: 0;
 	color: #ffffff;
 	font-weight: bold;
@@ -101,85 +107,77 @@ input:focus {
 	background-color: #058CFF;
 	width: 230px;
 	height: 60px;
+
 }
 
-.register-cancel {
+input[type=button] {
 	background-color: #ADADAD;
 }
+
 </style>
 <script src="register.js"></script>
-</head>
-
-<body>
-	<div id="member-page">
-		<div id="member-container">
-			<div id="member-block">
-				<div class="member-title">회원 정보 수정</div>
-				<form action="updateSvc.jsp" method="post" id="f">
-					<table class="register-input">
-						<%
-	String id = (String)session.getAttribute("id");
-	MemberDAO memberDao = new MemberDAO();
-	MemberDTO member = memberDao.selectId(id);
-	
-	String name = member.getName();
-	String tel = member.getTel();
-	String email = member.getEmail();
-
-	
+<%
+	String name = (String)session.getAttribute("name");
+	String tel = (String)session.getAttribute("tel");
+	String email = (String)session.getAttribute("email");
 %>
-						<tr>
-							<td colspan="2"><label>아이디</label><br> <input
-								type="text" tabIndex="1" onkeydown="return tab(this, event)"
-								name="id" id="id" class="reigster-id" value="<%=id %>" readonly><br>
-								<span id="idAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>비밀번호</label><br> <input
-								type="password" tabIndex="2" onkeydown="return tab(this, event)"
-								name="pw" id="pw" class="register-pw" onchange="pwCheck()"><br>
-								<span id="pwAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>비밀번호 확인</label><br> <input
-								type="password" tabIndex="3" onkeydown="return tab(this, event)"
-								name="pwChk" id="pwChk" class="register-pw"
-								onchange="confirmCheck()"><br> <span
-								id="pwChkAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>이름</label><br> <input
-								type="text" tabIndex="4" onkeydown="return tab(this, event)"
-								name="name" id="name" class="reigster-name" placeholder="홍길동"
-								onchange="nameCheck()" value="<%=name %>"><br> <span
-								id="nameAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>전화번호</label><br> <input
-								type="text" tabIndex="5" onkeydown="return tab(this, event)"
-								name="tel" id="tel" class="reigster-tel" value="<%=tel %>"
-								readonly><br> <span id="telAlert"></span></td>
-						</tr>
-						<tr>
-							<td colspan="2"><label>이메일</label><br> <input
-								type="text" tabIndex="6" onkeydown="return tab(this, event)"
-								name="email" id="email" class="reigster-email"
-								value="<%=email %>" readonly><br> <span
-								id="emailAlert"></span></td>
-						</tr>
-						<tr>
-							<td><input type="button" class="register-cancel" value="취소"
-								onclick="location.href='login.jsp'"></td>
-							<td><input type="submit" class="register-submit"
-								value="회원가입"></td>
-						</tr>
-					</table>
-				</form>
-			</div>
+<div id="member-page">
+	<div id="member-container">
+		<div id="member-block">
+			<div class="member-title">대한민국 청와대 회원가입</div>
+			<form action="updateSvc.jsp" method="post" id="f">
+				<table class="register-input">
+					<tr>
+						<td><label>아이디</label><br> <input
+							type="text" tabIndex="1" onkeydown="return tab(this, event)"
+							name="id" id="id" class="reigster-id" value="<%=id%>" readonly onchange="idCheck()"><br>
+						</td>
+					</tr>
+					<tr>
+						<td><label>비밀번호</label><br> <input
+							type="password" tabIndex="2" onkeydown="return tab(this, event)"
+							name="pw" id="pw" class="register-pw" onchange="pwCheck()"><br>
+							<span id="pwAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>비밀번호 확인</label><br> <input
+							type="password" tabIndex="3" onkeydown="return tab(this, event)"
+							name="pwChk" id="pwChk" class="register-pw"
+							onchange="confirmCheck()"><br> <span id="pwChkAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>이름</label><br> <input type="text"
+							tabIndex="4" onkeydown="return tab(this, event)" name="name"
+							id="name" class="reigster-name" value="<%=name%>"
+							onchange="nameCheck()"><br> <span id="nameAlert"></span>
+						</td>
+					</tr>
+					<tr>
+						<td><label>전화번호</label><br> <input
+							type="text" tabIndex="5" onkeydown="return tab(this, event)"
+							name="tel" id="tel" class="reigster-tel"
+							value="<%=tel%>" onchange="telCheck()"><br>
+							<span id="telAlert"></span></td>
+					</tr>
+					<tr>
+						<td><label>이메일</label><br> <input
+							type="text" tabIndex="6" onkeydown="return tab(this, event)"
+							name="email" id="email" class="reigster-email" value="<%=email%>"
+							onchange="emailCheck()"><br> <span id="emailAlert"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" class="register-cancel" value="취소"
+							onclick="location.href='mypage.jsp'">
+							<input type="submit" class="register-submit" value="수정완료">
+						</td>
+					</tr>
+				</table>
+			</form>
+
 		</div>
 	</div>
+</div>
 
-
-
-</body>
-</html>
+<%@include file="../footer.jsp" %>

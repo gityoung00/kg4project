@@ -293,7 +293,7 @@
             </p>
 
             <div class="btns t2">
-                <a href="https://www.opencheongwadae.kr/main/" class="btn def_btn">홈페이지 바로가기</a>
+                <a href="../homepage/main.jsp" class="btn def_btn">홈페이지 바로가기</a>
                 <a id="reserve-link" class="btn def_btn c2">관람신청 바로가기</a>
             </div>
         </div>
@@ -317,7 +317,7 @@
                                 }
                             }
                             else if (res.GateOperationMode == "GATE") {
-                                window.location.href = res.GateOperationNextUrl;
+                                window.location.href = "/blueHouse/member/mypage.jsp";
                             }
                         },
                         "FRONTEND",             // fixed

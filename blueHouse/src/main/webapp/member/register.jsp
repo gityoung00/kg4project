@@ -96,7 +96,7 @@ input:focus {
 	outline: 1px solid #058CFF;
 }
 
-input[type=submit], input[type=button] {
+input[type=button] {
 	border: 0;
 	color: #ffffff;
 	font-weight: bold;
@@ -108,12 +108,13 @@ input[type=submit], input[type=button] {
 
 }
 
-input[type=button] {
+td .register-cancel {
 	background-color: #ADADAD;
 }
 
 </style>
 <script src="register.js"></script>
+<title>회원가입</title>
 <div id="member-page">
 	<div id="member-container">
 		<div id="member-block">
@@ -163,7 +164,7 @@ input[type=button] {
 						<td>
 							<input type="button" class="register-cancel" value="취소"
 							onclick="location.href='login.jsp'">
-							<input type="submit" class="register-submit" value="회원가입">
+							<input type="button" class="register-submit" onclick="memberCheck()" value="회원가입">
 						</td>
 					</tr>
 				</table>

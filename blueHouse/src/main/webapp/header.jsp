@@ -262,5 +262,3 @@
 		</div>
 	</header>
 	<!-- header 끝 -->
-</body>
-</html>

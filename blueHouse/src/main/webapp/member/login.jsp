@@ -46,7 +46,11 @@ body {
 	text-align: center;
 }
 
-.login-id, .login-pw {
+table {
+	max-width: 560px;
+}
+
+tbody input[type=text], input[type=password] {
 	outline: 0;
 	padding: 5px;
 	border: 0;
@@ -55,7 +59,7 @@ body {
 	font-size: 25px;
 }
 
-.login-register, .login-submit {
+tbody input[type=submit], input[type=button] {
 	border: 0;
 	color: #ffffff;
 	font-weight: bold;
@@ -66,7 +70,7 @@ body {
 	height: 60px;
 }
 
-.login-register {
+input[type=button] {
 	background-color: #058CFF;
 }
 
@@ -109,11 +113,11 @@ a:active {
 			<form action="loginSvc.jsp" method="post" id="f">
 				<table class="login-input">
 					<tr>
-						<td colspan="2"><input type="text" name="id" class="login-id"
+						<td colspan="2"><input type="text" name="id" id="id" class="login-id"
 							placeholder="아이디 입력"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="password" name="pw"
+						<td colspan="2"><input type="password" name="pw" id="pw"
 							class="login-pw" placeholder="비밀번호 입력"></td>
 					</tr>
 
