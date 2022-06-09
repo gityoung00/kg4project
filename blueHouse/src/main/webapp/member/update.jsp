@@ -117,6 +117,9 @@ input[type=button] {
 </style>
 <script src="register.js"></script>
 <%
+	if(id == null) {
+		out.print("<script>alert('로그인 정보가 없습니다.'); location.href='login.jsp'</script>");
+	}
 	String name = (String)session.getAttribute("name");
 	String tel = (String)session.getAttribute("tel");
 	String email = (String)session.getAttribute("email");
@@ -124,7 +127,7 @@ input[type=button] {
 <div id="member-page">
 	<div id="member-container">
 		<div id="member-block">
-			<div class="member-title">대한민국 청와대 회원가입</div>
+			<div class="member-title">회원 정보 수정</div>
 			<form action="updateSvc.jsp" method="post" id="f">
 				<table class="register-input">
 					<tr>

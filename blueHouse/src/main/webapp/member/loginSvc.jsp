@@ -21,7 +21,7 @@
 		session.setAttribute("name", member.getName());
 		session.setAttribute("email", member.getEmail());
 		session.setAttribute("tel", member.getTel());
-		out.print("<script>alert('로그인에 성공하셨습니다.'); location.href='../hompage/main.jsp';</script>");
+		out.print("<script>alert('로그인에 성공하셨습니다.'); location.href='/blueHouse/homepage/main.jsp';</script>");
 		
 	}else {
 		out.print("<script>alert('아이디 혹은 비밀번호를 다시 입력해 주세요.'); history.back();</script>");

@@ -97,7 +97,7 @@ a:active {
 
 <%
 	if(id == null) {
-		out.print("<script>alert('로그인 먼저 해주세요.'); location.href='login.jsp'</script>");
+		out.print("<script>alert('로그인 정보가 없습니다.'); location.href='login.jsp'</script>");
 		
 	}else {
 %>
