@@ -23,24 +23,5 @@ public class CommonDAO {
 	return conn;
 	}
 	
-	public static void main(String[] args) {
-		Connection con = null;
-		
-		String url = "jdbc:oracle:thin:@DBlocal_high?TNS_ADMIN=/Users/gayeonkim/Wallet_DBlocal";
-		String user = "admin";
-		String pwd = "KGproject1234!";
-
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection(url, user, pwd);
-			System.out.println("드라이브 로딩 성공");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		
-		
-		
 	
-	}
 }
