@@ -2,9 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@include file="/header.jsp"%>
-<%
-	/* String id = (String)session.getAttribute(id); */
-%>
+
 <style>
 	#idea_write_btn{
 	border: none;
@@ -25,7 +23,7 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="make-ideaUpdateSvc.jsp"
+					<form action="make-ideaWriteSvc.jsp"
 						class="board-form plani-form" method="post" accept-charset="utf-8">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
@@ -59,18 +57,9 @@
 							<div class="request plani-board-lists">
 								<table class="bbs" style="margin-left: 130px; width: 1100px;">
 									<tr>
-										<th width="200">아이디</th>
-										<td><input type="text" id="num" name="num" style="width: 80%; font-size: 23px"></td>
-									</tr>
-									<tr>
-										<th width="200">이름</th>
-										<td><input type="text" id="num" name="num" style="width: 80%; font-size: 23px"></td>
-									</tr>
-									<tr>
 										<th width="200">제목</th>
 										<td><input type="text" id="title" name="title" style="width: 80%; font-size: 23px"></td>
 									</tr>
-									
 									<tr>
 										<th>내용</th>
 										<td><textarea style="height: 300px; font-size: 18px" name="content"></textarea></td>

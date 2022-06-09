@@ -4,6 +4,7 @@ footer{
 	width: 100%;
 	height: 130px;
 	background-color: #2A2D34;
+	word-break: keep all;
 }
 .logo{
 	float:left;
@@ -11,20 +12,23 @@ footer{
 	margin-left:20px;
 }
 #addrinfo{
-	text-align:right;
+	padding-left: 50rem;
+    text-align: right;
+    color: rgba(255,255,255,.5);
 }
 address{
 	color: #9fA4AD;
+	padding-top: 25px;
 }
 .policy_btn{
-	margin-left: 650px;
-	margin-top: 50px;
-	float:left;
-	text-align:center;
 	color: #9fA4AD;
+	display: inline-block;
+	margin: 1rem 5rem 0 0;
+    vertical-align: top;
 }
 .warning{
 	color: #A9A9A9;
+	display: inline-block;
 }
 address, .warning{
 	margin-right:20px;
