@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link
-	href="/blueHouse/css/629c9a8a89181902c0c9e9ac444ea4b1f35a.css"
-	rel="stylesheet" type="text/css" charset="UTF-8" media="all">
-
+<link href="/blueHouse/css/629c9a8a89181902c0c9e9ac444ea4b1f35a.css" rel="stylesheet" type="text/css" charset="UTF-8" media="all">
 <script async="" src="/blueHouse/js/bstrk.1.js"></script>
-<script type="text/javascript"
-	src="/blueHouse/js/f8305fecf5c3934d7348845831473b4d.js"></script>
+<script type="text/javascript" src="/blueHouse/js/f8305fecf5c3934d7348845831473b4d.js"></script>
 <style type="text/css">
 .JColResizer {
 	table-layout: fixed;
@@ -59,11 +55,19 @@
 	cursor: default;
 	display: none;
 }
+#notice_write_btn{
+	border: none;
+	background-color: #2f3337;
+	color: white;
+	font-size: 13px;
+	height: 35px;
+	padding: 8px 10px 15px 10px;
+	margin-top: 5px;
+}	
 </style>
-<link rel="stylesheet" type="text/css"
-	href="/blueHouse/www.opencheongwadae.kr/_res/plani_api/social.css">
+<link rel="stylesheet" type="text/css" href="/blueHouse/www.opencheongwadae.kr/_res/plani_api/social.css">
 
-<title>Insert title here</title>
+<title>청와대 홈페이지</title>
 </head>
 <body>
 	<!-- header -->
@@ -77,7 +81,6 @@
 					alt="청와대, 국민 품으로" class="ov">
 				</a>
 			</h1>
-			<!--<span class="h_dday">D+<em>28</em></span>-->
 			<nav id="gnb1">
 				<ul id="head_menu" class="topmenu">
 					<li class="lnb2 mnfirst"><a href="/open-message">개방의 의미</a></li>
