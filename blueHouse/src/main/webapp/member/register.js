@@ -28,7 +28,7 @@ function idCheck() {
 	
 	/*console.log(id);*/
 	
-	if (id == "") {
+	if (!id) {
 		msg.style.color = "red";
 		msg.innerHTML = "필수 정보입니다.";
 		return;
@@ -97,7 +97,6 @@ function confirmCheck() {
 function nameCheck() {
 	var name = document.getElementById("name").value;
 	var msg = document.getElementById('nameAlert');
-	msg.style.color = "red";
 	msg.style.fontWeight = "bold";
 	msg.style.fontSize = "11px";
 	msg.style.position = "relative";

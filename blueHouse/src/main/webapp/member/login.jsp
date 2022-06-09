@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>청와대 로그인</title>
+<%@include file="/header.jsp" %>
 <style>
 body {
 	margin: 0px;
@@ -109,7 +105,7 @@ a:active {
 
 
 </style>
-</head>
+
 <body>
 	<div id="member-page">
 		<div id="member-block">
