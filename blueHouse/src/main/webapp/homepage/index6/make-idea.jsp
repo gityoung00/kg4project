@@ -2,7 +2,17 @@
 	pageEncoding="UTF-8"%>
 
 <%@include file="/header.jsp"%>
-
+<style>
+	#notice_write_btn{
+	border: none;
+	background-color: #2f3337;
+	color: white;
+	font-size: 13px;
+	height: 35px;
+	padding: 8px 10px 15px 10px;
+	margin-top: 5px;
+}
+</style>
 <main id="main">
 	<div class="main_wrap">
 		<div id="contents">
@@ -145,7 +155,7 @@
 									</tbody>
 								</table>
 								<div align="right">
-									<input type="button" value="글쓰기" id="notice_write_btn">
+									<input type="button" value="글쓰기" id="notice_write_btn" onclick="location.href='make-ideaWrite.jsp'">
 								</div>
 								
 								<div class="paging-area">
