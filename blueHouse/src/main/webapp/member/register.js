@@ -39,7 +39,7 @@ function idCheck() {
 		msg.innerHTML = "5~20자의 영문 소문자, 숫자만 사용 가능합니다.";
 		return;
 	}
-
+	msg.innerHTML = "";
 }
 
 
@@ -169,17 +169,16 @@ function emailCheck() {
 }
 
 function memberCheck() {
-	var msg1 = document.getElementById('idAlert').value;
-	var msg2 = document.getElementById('pwAlert').value;
-	var msg3 = document.getElementById('pwChkAlert').value;
-	var msg4 = document.getElementById('nameAlert').value;
-	var msg5 = document.getElementById('telAlert').value;
-	var msg6 = document.getElementById('emailAlert').value;
+	var msg1 = document.getElementById('idAlert').innerHTML;
+	var msg2 = document.getElementById('pwAlert').innerHTML;
+	var msg3 = document.getElementById('pwChkAlert').innerHTML;
+	var msg4 = document.getElementById('nameAlert').innerHTML;
+	var msg5 = document.getElementById('telAlert').innerHTML;
+	var msg6 = document.getElementById('emailAlert').innerHTML;
 	
-	consol.log(msg2);
-	
-	if(msg1 && msg2 && msg3 && msg4 && msg5 && msg6) {
-		alert('모든 입력 사항들을 채웠는지 확인해 주세요.');
+	if(msg1 || msg2 || msg3 || msg4 || msg5 || msg6) {
+		alert('모든 입력 사항들을 올바르게 입력하였는지 확인해 주세요.');
+		return;
 	}else {
 		document.getElementById('f').submit();
 	}
