@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+footer{
+	width: 100%;
+	height: 130px;
+	background-color: #2A2D34;
+}
+.logo{
+	float:left;
+	margin-top: 40px;
+	margin-left:20px;
+}
+#addrinfo{
+	text-align:right;
+}
+address{
+	color: #9fA4AD;
+}
+.policy_btn{
+	margin-left: 650px;
+	margin-top: 50px;
+	float:left;
+	text-align:center;
+	color: #9fA4AD;
+}
+.warning{
+	color: #A9A9A9;
+}
+address, .warning{
+	margin-right:20px;
+	text-align:right;
+}

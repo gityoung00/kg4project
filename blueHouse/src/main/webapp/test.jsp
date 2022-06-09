@@ -15,11 +15,11 @@
     <meta name="keyword" content="청와대, 국민 품으로" />
     <meta name="author" content="청와대, 국민 품으로" />
 
-    <meta property="og:type" content="website" />
+    <!-- <meta property="og:type" content="website" />
     <meta property="og:site_name" content="청와대, 국민 품으로" />
     <meta property="og:title" content="청와대, 국민 품으로" />
     <meta property="og:url" content="" />
-    <meta property="og:description" content="청와대, 국민 품으로" />
+    <meta property="og:description" content="청와대, 국민 품으로" /> -->
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>청와대, 국민 품으로</title>
@@ -293,7 +293,7 @@
             </p>
 
             <div class="btns t2">
-                <a href="https://www.opencheongwadae.kr/main/" class="btn def_btn">홈페이지 바로가기</a>
+                <a href="../homepage/main.jsp" class="btn def_btn">홈페이지 바로가기</a>
                 <a id="reserve-link" class="btn def_btn c2">관람신청 바로가기</a>
             </div>
         </div>
@@ -317,7 +317,7 @@
                                 }
                             }
                             else if (res.GateOperationMode == "GATE") {
-                                window.location.href = res.GateOperationNextUrl;
+                                window.location.href = "/blueHouse/member/mypage.jsp";
                             }
                         },
                         "FRONTEND",             // fixed
