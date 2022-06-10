@@ -18790,7 +18790,7 @@ a:hover, a:focus, a:active {
   right: 5rem;
   top: 3rem;
   z-index: 3;
-  width: 3rem;
+  width: 4rem;
   height: 3rem;
   color: #fff;
   text-align: center;
@@ -18925,10 +18925,10 @@ a:hover, a:focus, a:active {
   top: 0;
   width: 35%;
   height: 100vh;
-  background: url('../../_html/img/layout/sitemap.png') no-repeat left/cover
+  background: url('/blueHouse/img/sitemap.png') no-repeat left/cover
 }
 
-/*#gnb2 > ul::after{content: '';position: absolute; left: -4rem; top: -5rem; width: 35%; height: 100vh; background: url('/_html/img/layout/sitemap.png') no-repeat left/cover;}*/
+/*#gnb2 > ul::after{content: '';position: absolute; left: -4rem; top: -5rem; width: 35%; height: 100vh; background: url('/blueHouse/img/sitemap.png') no-repeat left/cover;}*/
 #gnb2>ul>li {
   padding-right: 2rem;
   text-align: left;
@@ -18965,7 +18965,7 @@ a:hover, a:focus, a:active {
   margin-left: 1rem;
   position: relative;
   top: -.2rem;
-  background: url('../../_html/img/layout/icon_blank.png') center no-repeat;
+  background: url('/blueHouse/img/icon_blank.png') center no-repeat;
   background-size: contain
 }
 
@@ -19288,7 +19288,7 @@ a:hover, a:focus, a:active {
   text-align: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background-image: url(../../_html/img/layout/footer_top_arrow.png);
+  background-image: url(/blueHouse/img/footer_top_arrow.png);
   background-position: center top 1.5rem;
   background-repeat: no-repeat;
   z-index: 9
@@ -19654,7 +19654,7 @@ a:hover, a:focus, a:active {
     top: -5rem;
     width: 35%;
     height: 100vh;
-    background: url('../../_html/img/layout/sitemap.png') no-repeat left/cover;
+    background: url('/blueHouse/img/sitemap.png') no-repeat left/cover;
   }
 
   #gnb2>ul::before {
@@ -22491,7 +22491,7 @@ form.save-form .type2 {
   transform: translateX(-50%);
   width: 100vw;
   height: calc(100% + 10rem);
-  background: url('../../_html/img/sub/climbing_summary_img01.png');
+  background: url('/blueHouse/img/homepage/등산로/등산로개요/climbing_summary_img01.png');
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover

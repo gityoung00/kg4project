@@ -8,7 +8,7 @@
 <meta name="viewport"
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
 <meta name="title" content="청와대 국민의 품으로">
-<title>메인 | 청와대, 국민 품으로</title>
+<title>메인화면</title>
 <meta name="robots" content="index,follow">
 <meta name="keywords"
 	content="청와대, 개방, 국민, 청와대개방, 청와대오픈, 개방행사, 청와대행사, 청와대방문, 청와대탐방, 윤석열, 윤당선인, 당선인, 제20대대통령, 제20대정부, 공약, 국민, 국민개방, 대국민개방, 대국민,청와대 관람,청와대 방문,청와대이전">
@@ -91,9 +91,10 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<link rel="shortcut icon" href="/blueHouse/img/hompage/favicon.png"
+<link rel="shortcut icon" href="/blueHouse/img/homepage/favicon.png"
 	type="image/x-icon">
 <link rel="apple-touch-icon-precomposed" href="/favicon_m.png">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <!-- LOGGER(TM) TRACKING SCRIPT V.40 FOR logger.co.kr / 107744 : COMBINE TYPE / DO NOT ALTER THIS SCRIPT. -->
 <script type="text/javascript">
 	var _TRK_LID = "107744";
@@ -343,107 +344,18 @@
 						data-fp-styles="null" style="height: 1252px;">
 						<div class="fp-tableCell" style="height: 1252px;">
 							<div class="visual_wrap">
-
-
-								<div class="v_item item3 on" style="">
-									<div class="txt_box">
-										<p class="m_tit tLine2">
-											<span style="visibility: hidden;"><span class="word1"
-												style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span
-													class="char1 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">“</span><span
-													class="char2 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">본</span><span
-													class="char3 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">관</span><span
-													class="char4 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">,</span></span>
-												<span class="word2"
-												style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span
-													class="char1 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">영</span><span
-													class="char2 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">빈</span><span
-													class="char3 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">관</span><span
-													class="char4 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">을</span></span>
-												<span class="word3"
-												style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span
-													class="char1 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">비</span><span
-													class="char2 animated fadeInRight"
-													style="display: inline-block; visibility: visible;">롯</span><span
-													class="char3"
-													style="display: inline-block; visibility: hidden;">하</span><span
-													class="char4"
-													style="display: inline-block; visibility: hidden;">여</span><span
-													class="char5"
-													style="display: inline-block; visibility: hidden;">.</span><span
-													class="char6"
-													style="display: inline-block; visibility: hidden;">.</span></span>
-											</span>
-										<ul class="texts" style="display: none;">
-											<li class="current">“본관, 영빈관을 비롯하여..</li>
-										</ul>
-										</p>
-									</div>
-									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img03.jpg" alt="">
-									</div>
-								</div>
-								<div class="v_item item4" style="display: none;">
-									<div class="txt_box">
-										<p class="m_tit tLine1">최고의 정원이라 불리는</p>
-										<p class="m_tit tLine2">녹지원과 상춘재를 모두</p>
-										<p class="m_tit tLine3">국민들의 품으로 돌려드리겠습니다.”</p>
-									</div>
-									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img04.jpg" alt="">
-									</div>
-								</div>
-								<div class="v_item item5" style="display: none;">
-									<div class="txt_box">
-										<p class="m_tit tLine2">“경복궁 지하철역에서 경복궁을 거쳐 청와대를 거쳐..</p>
-									</div>
-									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img05.jpg" alt="">
-									</div>
-								</div>
-								<div class="v_item item6" style="display: none;">
-									<div class="txt_box">
-										<p class="m_tit tLine2">북악산으로의 등반로 역시 개방 되는 것입니다.”</p>
-									</div>
-									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img06.jpg" alt="">
-									</div>
-								</div>
-								<div class="v_item item7 " style="display: none;">
-									<div class="txt_box">
-										<p class="v_tit2">
-											<span>약</span><span>속 </span><span>실</span><span>천</span><span>으</span><span>로
-											</span><span>시</span><span>작</span><span>합</span><span>니</span><span>다</span>
-										</p>
-										<!--<p class="v_tit2"><span>약속 실천으로</span> <span>시작합니다</span></p>
-       <p class="v_tit2"><img src="../img/main/v_txt10.png" alt=""><img src="../img/main/v_txt11.png" alt=""></p>
-       <p class="m_tit tLine2">첫 번째 약속</p>-->
-									</div>
-									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img07.jpg" alt="">
-									</div>
-								</div>
-								<div class="v_item item1" style="display: none;">
+								<div class="v_item item1 on">
 									<div class="txt_box">
 										<p class="s_tit tLine2">2022. 05. 10.</p>
 										<p class="v_tit">
-											<!--<span><img src="/blueHouse/img/hompage/v_txt01.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt02.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt03.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt04.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt05.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt06.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt07.png" alt=""></span>
-        <span><img src="/blueHouse/img/hompage/v_txt08.png" alt=""></span>-->
+											<!--<span><img src="/blueHouse/img/homepage/v_txt01.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt02.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt03.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt04.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt05.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt06.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt07.png" alt=""></span>
+        <span><img src="/blueHouse/img/homepage/v_txt08.png" alt=""></span>-->
 											<span>청</span> <span>와</span> <span>대</span> <span>, </span><i
 												class="br"></i> <span>국</span> <span>민 </span> <span>품</span>
 											<span>으</span> <span>로</span>
@@ -451,7 +363,7 @@
 										<!--<p class="s_tit tLine3">국민 품으로 돌려드립니다.</p>-->
 									</div>
 									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img01_sdown.jpg" alt="">
+										<img src="/blueHouse/img/homepage/v_img01_sdown.jpg" alt="">
 									</div>
 								</div>
 								<div class="v_item item2" style="display: none;">
@@ -557,11 +469,100 @@
 										</ul>
 										</p>
 									</div>
+
+								<div class="v_item item3" style="display: none;">
+									<div class="txt_box">
+										<p class="m_tit tLine2">
+											<span style="visibility: hidden;"><span class="word1"
+												style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span
+													class="char1 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">“</span><span
+													class="char2 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">본</span><span
+													class="char3 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">관</span><span
+													class="char4 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">,</span></span>
+												<span class="word2"
+												style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span
+													class="char1 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">영</span><span
+													class="char2 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">빈</span><span
+													class="char3 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">관</span><span
+													class="char4 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">을</span></span>
+												<span class="word3"
+												style="display: inline-block; transform: translate3d(0px, 0px, 0px);"><span
+													class="char1 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">비</span><span
+													class="char2 animated fadeInRight"
+													style="display: inline-block; visibility: visible;">롯</span><span
+													class="char3"
+													style="display: inline-block; visibility: hidden;">하</span><span
+													class="char4"
+													style="display: inline-block; visibility: hidden;">여</span><span
+													class="char5"
+													style="display: inline-block; visibility: hidden;">.</span><span
+													class="char6"
+													style="display: inline-block; visibility: hidden;">.</span></span>
+											</span>
+										<ul class="texts" style="display: none;">
+											<li class="current">“본관, 영빈관을 비롯하여..</li>
+										</ul>
+										</p>
+									</div>
+									<div class="img_box">
+										<img src="/blueHouse/img/homepage/v_img03.jpg" alt="">
+									</div>
+								</div>
+								<div class="v_item item4" style="display: none;">
+									<div class="txt_box">
+										<p class="m_tit tLine1">최고의 정원이라 불리는</p>
+										<p class="m_tit tLine2">녹지원과 상춘재를 모두</p>
+										<p class="m_tit tLine3">국민들의 품으로 돌려드리겠습니다.”</p>
+									</div>
+									<div class="img_box">
+										<img src="/blueHouse/img/homepage/v_img04.jpg" alt="">
+									</div>
+								</div>
+								<div class="v_item item5" style="display: none;">
+									<div class="txt_box">
+										<p class="m_tit tLine2">“경복궁 지하철역에서 경복궁을 거쳐 청와대를 거쳐..</p>
+									</div>
+									<div class="img_box">
+										<img src="/blueHouse/img/homepage/v_img05.jpg" alt="">
+									</div>
+								</div>
+								<div class="v_item item6" style="display: none;">
+									<div class="txt_box">
+										<p class="m_tit tLine2">북악산으로의 등반로 역시 개방 되는 것입니다.”</p>
+									</div>
+									<div class="img_box">
+										<img src="/blueHouse/img/homepage/v_img06.jpg" alt="">
+									</div>
+								</div>
+								<div class="v_item item7 " style="display: none;">
+									<div class="txt_box">
+										<p class="v_tit2">
+											<span>약</span><span>속 </span><span>실</span><span>천</span><span>으</span><span>로
+											</span><span>시</span><span>작</span><span>합</span><span>니</span><span>다</span>
+										</p>
+										<!--<p class="v_tit2"><span>약속 실천으로</span> <span>시작합니다</span></p>
+       <p class="v_tit2"><img src="../img/main/v_txt10.png" alt=""><img src="../img/main/v_txt11.png" alt=""></p>
+       <p class="m_tit tLine2">첫 번째 약속</p>-->
+									</div>
+									<div class="img_box">
+										<img src="/blueHouse/img/homepage/v_img07.jpg" alt="">
+									</div>
+								</div>
+								
 									<!--<div class="txt_box2">
        <p class="a_tit "><2022.3.20 윤석열 당선인 인터뷰></p>
       </div>-->
 									<div class="img_box">
-										<img src="/blueHouse/img/hompage/v_img02.jpg" alt="">
+										<img src="/blueHouse/img/homepage/v_img02.jpg" alt="">
 									</div>
 								</div>
 							</div>
@@ -590,7 +591,7 @@
 									<li class="t1"><a href="/introduce-map00">
 											<div class="item">
 												<div>
-													<img src="/blueHouse/img/hompage/icon_sec1_1.png" alt=""> <strong>지도로
+													<img src="/blueHouse/img/homepage/icon_sec1_1.png" alt=""> <strong>지도로
 														보는 시설소개</strong>
 												</div>
 											</div>
@@ -598,7 +599,7 @@
 									<li class="t2"><a href="/introduce-history">
 											<div class="item">
 												<div>
-													<img src="/blueHouse/img/hompage/icon_sec1_2.png" alt=""> <strong>청와대
+													<img src="/blueHouse/img/homepage/icon_sec1_2.png" alt=""> <strong>청와대
 														역사</strong>
 												</div>
 											</div>
@@ -606,7 +607,7 @@
 									<li class="t3"><a href="/introduce-heritage">
 											<div class="item">
 												<div>
-													<img src="/blueHouse/img/hompage/icon_sec1_3.png" alt=""> <strong>경내
+													<img src="/blueHouse/img/homepage/icon_sec1_3.png" alt=""> <strong>경내
 														주요 유적</strong>
 												</div>
 											</div>
@@ -631,14 +632,14 @@
 									</p>
 									<ul class="tab_list">
 										<li><a href="/sub0506"><span><img
-													src="/blueHouse/img/hompage/section02_icon01.png" alt="">관람시간
+													src="/blueHouse/img/homepage/section02_icon01.png" alt="">관람시간
 													및 해설안내</span></a></li>
 										<li><a href="/sub0508"><span><img
-													src="/blueHouse/img/hompage/section02_icon02.png" alt="">활용
+													src="/blueHouse/img/homepage/section02_icon02.png" alt="">활용
 													프로그램</span></a></li>
 										<!--<li><a href=""><span>행사 이모저모</span></a></li>-->
 										<li><a href="/event-tourism"><span><img
-													src="/blueHouse/img/hompage/section02_icon03.png" alt="">함께
+													src="/blueHouse/img/homepage/section02_icon03.png" alt="">함께
 													가 볼 만한 장소</span></a></li>
 									</ul>
 								</div>
@@ -653,7 +654,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_6.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_6.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>전국을 누리다</span>
@@ -667,7 +668,7 @@
 													style="width: 470px;" tabindex="0">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_1.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_1.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>약속을 담다</span>
@@ -680,7 +681,7 @@
 													aria-hidden="true" style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_4.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_4.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>희망을 나누다</span>
@@ -692,7 +693,7 @@
 													aria-hidden="true" style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_2.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_2.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>역사를 그리다</span>
@@ -704,7 +705,7 @@
 													aria-hidden="true" style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_5.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_5.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>자연을 품다</span>
@@ -717,7 +718,7 @@
 													aria-hidden="true" style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_3.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_3.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>문화를 펼치다</span>
@@ -729,7 +730,7 @@
 													aria-hidden="true" style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_6.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_6.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>전국을 누리다</span>
@@ -743,7 +744,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_1.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_1.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>약속을 담다</span>
@@ -757,7 +758,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_4.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_4.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>희망을 나누다</span>
@@ -770,7 +771,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_2.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_2.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>역사를 그리다</span>
@@ -783,7 +784,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_5.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_5.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>자연을 품다</span>
@@ -797,7 +798,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_3.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_3.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>문화를 펼치다</span>
@@ -810,7 +811,7 @@
 													style="width: 470px;" tabindex="-1">
 													<div class="inner">
 														<div class="thumb">
-															<img src="/blueHouse/img/hompage/img_event_6.jpg" alt="">
+															<img src="/blueHouse/img/homepage/img_event_6.jpg" alt="">
 														</div>
 														<div class="box">
 															<span>전국을 누리다</span>
@@ -851,9 +852,9 @@
 									휴식하고, 때로는 역사와 문화를 탐방하시기 바랍니다.
 								</p>
 								<ul class="tab_list">
-									<li class="on"><a href="/trail-relic" class="inner">
+									<li><a href="/trail-relic" class="inner">
 											<div class="thumb">
-												<span><img src="/blueHouse/img/hompage/section3_thumb05.png"
+												<span><img src="/blueHouse/img/homepage/section3_thumb05.png"
 													alt=""></span>
 											</div>
 											<div class="box">
@@ -863,7 +864,7 @@
 									<li><a href="/trail-course" class="inner">
 											<div class="thumb">
 												<span> <img
-													src="/blueHouse/img/hompage/section3_thumb06.png" alt=""> <!--<i class="blur">
+													src="/blueHouse/img/homepage/section3_thumb06.png" alt=""> <!--<i class="blur">
            <span><b class="xi-maker"></b><br>곧 공개 됩니다.</span>
           </i>-->
 												</span>
@@ -874,7 +875,7 @@
 									</a></li>
 									<li><a href="/trail-application" class="inner">
 											<div class="thumb">
-												<span><img src="/blueHouse/img/hompage/section3_thumb07.png"
+												<span><img src="/blueHouse/img/homepage/section3_thumb07.png"
 													alt=""></span>
 											</div>
 											<div class="box">
@@ -925,7 +926,7 @@
 															style="width: 320px;" tabindex="0"><a
 															href="/make-review/view/id/1313" tabindex="0"> <span
 																class="thumb"><img
-																	src="/_files/board/20220524/1e3007db02937d8b5a4fe868d8cea07f.jpg"
+																	src="/blueHouse/img/homepage/1e3007db02937d8b5a4fe868d8cea07f.jpg"
 																	alt=""></span>
 																<div class="rp_detail">
 																	<div class="rp_info">
@@ -945,7 +946,7 @@
 															aria-hidden="false" style="width: 320px;" tabindex="0">
 															<a href="/make-review/view/id/1288" tabindex="0"> <span
 																class="thumb"><img
-																	src="/_files/board/20220521/7ec01ce9221aba0fa547a3748f5ecd78.jpeg"
+																	src="/blueHouse/img/homepage/7ec01ce9221aba0fa547a3748f5ecd78.jpeg"
 																	alt=""></span>
 																<div class="rp_detail">
 																	<div class="rp_info">
@@ -968,7 +969,7 @@
 															aria-hidden="false" style="width: 320px;" tabindex="0">
 															<a href="/make-review/view/id/1280" tabindex="0"> <span
 																class="thumb"><img
-																	src="/_files/board/20220521/61565333e51e103e67c21927f4995d25.jpg"
+																	src="/blueHouse/img/homepage/61565333e51e103e67c21927f4995d25.jpg"
 																	alt=""></span>
 																<div class="rp_detail">
 																	<div class="rp_info">
@@ -984,7 +985,7 @@
 															aria-hidden="false" style="width: 320px;" tabindex="0">
 															<a href="/make-review/view/id/1184" tabindex="0"> <span
 																class="thumb"><img
-																	src="/_files/board/20220516/a30037a2482bfd6c9531e5b8ac7d54d6.jpg"
+																	src="/blueHouse/img/homepage/a30037a2482bfd6c9531e5b8ac7d54d6.jpg"
 																	alt=""></span>
 																<div class="rp_detail">
 																	<div class="rp_info">
@@ -1040,43 +1041,43 @@
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/167"> <span><img
-															src="/_files/board/20220413/10e3d8b65c4337ca2ccf87a7aca49cc1.jpg"
+															src="/blueHouse/img/homepage/10e3d8b65c4337ca2ccf87a7aca49cc1.jpg"
 															alt="[청와대] 원경"></span>
 														<p class="tit">[청와대] 원경</p>
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/166"> <span><img
-															src="/_files/board/20220413/594196100369a9c09c158dde1853e6ef.jpg"
+															src="/blueHouse/img/homepage/594196100369a9c09c158dde1853e6ef.jpg"
 															alt="[청와대] 본관"></span>
 														<p class="tit">[청와대] 본관</p>
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/165"> <span><img
-															src="/_files/board/20220413/5d52f0f5d8c4b046c535b3cf14caf5e9.jpg"
+															src="/blueHouse/img/homepage/5d52f0f5d8c4b046c535b3cf14caf5e9.jpg"
 															alt="[등산로] 북악산 북측"></span>
 														<p class="tit">[등산로] 북악산 북측</p>
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/164"> <span><img
-															src="/_files/board/20220413/385b7569e38b128fd48cce8d727cf525.jpg"
+															src="/blueHouse/img/homepage/385b7569e38b128fd48cce8d727cf525.jpg"
 															alt="[청와대] 상춘재"></span>
 														<p class="tit">[청와대] 상춘재</p>
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/163"> <span><img
-															src="/_files/board/20220413/55f3373188e4beed254c335c3a701e1c.jpg"
+															src="/blueHouse/img/homepage/55f3373188e4beed254c335c3a701e1c.jpg"
 															alt="[청와대] 칠궁"></span>
 														<p class="tit">[청와대] 칠궁</p>
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/162"> <span><img
-															src="/_files/board/20220413/9b3f07e52e7ff973dea33ac3820d0ef4.jpg"
+															src="/blueHouse/img/homepage/9b3f07e52e7ff973dea33ac3820d0ef4.jpg"
 															alt="[청와대] 경내 풍경"></span>
 														<p class="tit">[청와대] 경내 풍경</p>
 												</a></li>
 
 												<li><a href="/communicate-photo/view/id/161"> <span><img
-															src="/_files/board/20220413/488a650a4fc9265c020d09e5e85e1a3b.jpg"
+															src="/blueHouse/img/homepage/488a650a4fc9265c020d09e5e85e1a3b.jpg"
 															alt="[청와대] 대통령 관저"></span>
 														<p class="tit">[청와대] 대통령 관저</p>
 												</a></li>
@@ -1129,7 +1130,7 @@
 											<ul class="card_list">
 
 												<li><a href="/communicate-news//view/id/94"> <span><img
-															src="/_files/board/20220519/80b6acf5dc272f57e44dd8619932f2c1.jpg"
+															src="/blueHouse/img/homepage/80b6acf5dc272f57e44dd8619932f2c1.jpg"
 															alt="과거와 현재를 관통하는 역사 여행"></span>
 														<div>
 															<p class="tit">과거와 현재를 관통하는 역사 여행</p>
@@ -1137,7 +1138,7 @@
 												</a></li>
 
 												<li><a href="/communicate-news//view/id/92"> <span><img
-															src="/_files/board/20220519/61433338eb2325e940d7b8ebb8c717c2.jpg"
+															src="/blueHouse/img/homepage/61433338eb2325e940d7b8ebb8c717c2.jpg"
 															alt="문화와 함께하는 도심 속 휴식 여행"></span>
 														<div>
 															<p class="tit">문화와 함께하는 도심 속 휴식 여행</p>
@@ -1145,7 +1146,7 @@
 												</a></li>
 
 												<li><a href="/communicate-news//view/id/55"> <span><img
-															src="/_files/board/20220412/d5917382e6817dc0daa8c1e82c18e9a7.jpg"
+															src="/blueHouse/img/homepage/d5917382e6817dc0daa8c1e82c18e9a7.jpg"
 															alt="국민 모두가 누릴 수 있는 공간으로!"></span>
 														<div>
 															<p class="tit">국민 모두가 누릴 수 있는 공간으로!</p>
@@ -1153,7 +1154,7 @@
 												</a></li>
 
 												<li><a href="/communicate-news//view/id/54"> <span><img
-															src="/_files/board/20220412/462c80fc9fa3894218d2fa457a6cfa1a.jpg"
+															src="/blueHouse/img/homepage/462c80fc9fa3894218d2fa457a6cfa1a.jpg"
 															alt="청와대가 개방된다면?"></span>
 														<div>
 															<p class="tit">청와대가 개방된다면?</p>
@@ -1175,7 +1176,7 @@
 
 					<!--<footer id="footer_section" class="footer section fp-auto-height fp-section fp-table active-start fp-completely">
 <div class="footer_wrap">
-<div id="siteinfo"><a class="logo"><img src="/blueHouse/img/hompage/logo_f.png" alt="청와대, 국민 품으로" /></a></div>
+<div id="siteinfo"><a class="logo"><img src="/blueHouse/img/homepage/logo_f.png" alt="청와대, 국민 품으로" /></a></div>
 <div class="addrinfo"><address>03053 서울 종로구 삼청로 118(삼청동, 한국금융연수원 별관)</address>
 <p><a href="mailto:opencheongwadae@gmail.com">opencheongwadae@gmail.com</a></sp>
 </div>

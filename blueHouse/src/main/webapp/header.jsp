@@ -63,7 +63,7 @@
 <link rel="stylesheet" type="text/css"
 	href="/blueHouse/www.opencheongwadae.kr/_res/plani_api/social.css">
 
-<title>Insert title here</title>
+<title>청와대</title>
 </head>
 <body>
 	<!-- header -->
@@ -132,7 +132,7 @@
 						<div class="submenu">
 							<ul class="sub05">
 								<li class="sub02 subfirst"><a
-									href="http://localhost:8085/blueHouse/homepage/index4/trail-summary.sjp">개요</a>
+									href="http://localhost:8085/blueHouse/homepage/index4/trail-summary.jsp">개요</a>
 								</li>
 								<li class="sub03"><a
 									href="http://localhost:8085/blueHouse/homepage/index4/trail-course.jsp">등산로
