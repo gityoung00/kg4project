@@ -6,27 +6,25 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class IdeaDAO {
+public class ReviewDAO {
 	private CommonDAO commonDao;
 	private Connection con;
 
-	public IdeaDAO() {
+	public ReviewDAO() {
 		commonDao = new CommonDAO();
 		con = commonDao.makeConnection();
 	}
 
 	public void write(boardDTO boardDto) {
-
-		String sql = "INSERT INTO idea_board VALUES(idea_board_seq.nextval, ?,?,?,?,?)";
+		String sql = "INSERT INTO review_board VALUES(review_board_seq.nextval, ?,?,?,?)";
 
 		PreparedStatement ps = null;
 		try {
 			ps = con.prepareStatement(sql);
-			ps.setString(1, boardDto.getTitle());
+			ps.setString(1, boardDto.getId());
 			ps.setString(2, boardDto.getContent());
 			ps.setString(3, boardDto.getName());
-			ps.setString(4, boardDto.getId());
-			ps.setInt(5, boardDto.getWrite_date());
+			ps.setInt(4, boardDto.getWrite_date());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -40,8 +38,8 @@ public class IdeaDAO {
 	}
 
 	public boardDTO selectNum(int num) {
-
-		String sql = "SELECT * FROM idea_board WHERE num=?";
+		String sql = "SELECT * FROM review_board WHERE num=?";
+		
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
@@ -51,10 +49,9 @@ public class IdeaDAO {
 			if (rs.next()) {
 				boardDTO boardDto = new boardDTO();
 				boardDto.setNum(rs.getInt("num"));
-				boardDto.setTitle(rs.getString("title"));
+				boardDto.setId(rs.getString("id"));
 				boardDto.setContent(rs.getString("content"));
 				boardDto.setName(rs.getString("name"));
-				boardDto.setId(rs.getString("id"));
 				boardDto.setWrite_date(rs.getInt("write_date"));
 				return boardDto;
 			}
@@ -72,15 +69,14 @@ public class IdeaDAO {
 	}
 
 	public void update(boardDTO boardDto) {
-		String sql = "UPDATE idea_board SET title=?, content=?, write_date=? WHERE num=?";
+		String sql = "UPDATE review_board SET content=?, write_date=? WHERE num=?";
 
 		PreparedStatement ps = null;
 		try {
 			ps = con.prepareStatement(sql);
-			ps.setString(1, boardDto.getTitle());
-			ps.setString(2, boardDto.getContent());
-			ps.setInt(3, boardDto.getWrite_date());
-			ps.setInt(4, boardDto.getNum());
+			ps.setString(1, boardDto.getContent());
+			ps.setInt(2, boardDto.getWrite_date());
+			ps.setInt(3, boardDto.getNum());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -94,9 +90,10 @@ public class IdeaDAO {
 	}
 	
 	public ArrayList<boardDTO> selectAll() {
-		ArrayList<boardDTO> boards = new ArrayList<boardDTO>();
+		ArrayList<boardDTO> boards = new ArrayList<>();
 		
-		String sql = "SELECT * FROM idea_board ORDER BY num DESC";
+		String sql = "SELECT * FROM review_board ORDER BY num DESC";
+		
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
@@ -105,10 +102,9 @@ public class IdeaDAO {
 			while(rs.next()) {
 				boardDTO boardDto = new boardDTO();
 				boardDto.setNum(rs.getInt("num"));
-				boardDto.setTitle(rs.getString("title"));
+				boardDto.setId(rs.getString("id"));
 				boardDto.setContent(rs.getString("content"));
 				boardDto.setName(rs.getString("name"));
-				boardDto.setId(rs.getString("id"));
 				boardDto.setWrite_date(rs.getInt("write_date"));
 				boards.add(boardDto);
 			}
@@ -126,7 +122,7 @@ public class IdeaDAO {
 	}
 	
 	public void delete(int num) {
-		String sql = "DELETE FROM idea_board WHERE num=?";
+		String sql = "DELETE FROM review_board WHERE num=?";
 		
 		PreparedStatement ps = null;
 		try {
@@ -142,42 +138,6 @@ public class IdeaDAO {
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	//검색
-	public ArrayList<boardDTO> search(String search_keyword) {
-		String sql = "SELECT * FROM idea_board WHERE title like ? OR content like ? ORDER BY num DESC";
-		System.out.println(search_keyword);
-		ArrayList<boardDTO> boards = new ArrayList<boardDTO>();
-		
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		try {
-			ps = con.prepareStatement(sql);
-			ps.setString(1,  "%"+search_keyword+"%");
-			ps.setString(2,  "%"+search_keyword+"%");
-			rs = ps.executeQuery();
-			while(rs.next()) {
-				boardDTO boardDto = new boardDTO();
-				boardDto.setNum(rs.getInt("num"));
-				boardDto.setTitle(rs.getString("title"));
-				boardDto.setContent(rs.getString("content"));
-				boardDto.setName(rs.getString("name"));
-				boardDto.setId(rs.getString("id"));
-				boardDto.setWrite_date(rs.getInt("write_date"));
-				boards.add(boardDto);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if(rs != null) rs.close();
-				if(ps != null) ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return boards;
 	}
 
 }

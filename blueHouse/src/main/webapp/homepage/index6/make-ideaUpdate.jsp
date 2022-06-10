@@ -1,9 +1,35 @@
+<%@page import="blueHouse.IdeaDAO"%>
+<%@page import="blueHouse.boardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 <%@include file="/header.jsp"%>
 <%
-	/* String id = (String)session.getAttribute(id); */
+	id = (String)session.getAttribute("id");
+	String n = request.getParameter("num");
+	
+	if(id == null || id == ""){
+		response.sendRedirect("/blueHouse/member/login.jsp");
+		return;
+	}
+	if(n == null || n == ""){
+		response.sendRedirect("make-idea.jsp");
+		return;
+	}
+	int num = 0;
+	try{
+		num = Integer.parseInt(n);
+	} catch(Exception e) {
+		response.sendRedirect("make-idea.jsp");
+		return;
+	}
+	
+	IdeaDAO ideaDao = new IdeaDAO();
+	boardDTO boardDto = ideaDao.selectNum(num);
+	if(boardDto == null) {
+		response.sendRedirect("make-idea.jsp");
+		return;
+	}
 %>
 <style>
 	#idea_write_btn{
@@ -25,8 +51,7 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="make-ideaUpdateSvc.jsp"
-						class="board-form plani-form" method="post" accept-charset="utf-8">
+					<form action="make-ideaUpdateSvc.jsp?num=<%=num %>" class="board-form plani-form" method="post" accept-charset="utf-8">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
 						<input type="hidden" name="redirect" value="/make-idea/index" style="display: none;"> 
@@ -60,20 +85,19 @@
 								<table class="bbs" style="margin-left: 130px; width: 1100px;">
 									<tr>
 										<th width="200">아이디</th>
-										<td><input type="text" id="num" name="num" style="width: 80%; font-size: 23px"></td>
+										<td><input type="text" name="id" style="width: 80%; font-size: 23px" value=<%=boardDto.getId() %> disabled> </td>
 									</tr>
 									<tr>
 										<th width="200">이름</th>
-										<td><input type="text" id="num" name="num" style="width: 80%; font-size: 23px"></td>
+										<td><input type="text" name="name" style="width: 80%; font-size: 23px" value=<%=boardDto.getName() %> disabled></td>
 									</tr>
 									<tr>
 										<th width="200">제목</th>
-										<td><input type="text" id="title" name="title" style="width: 80%; font-size: 23px"></td>
+										<td><input type="text" name="title" style="width: 80%; font-size: 23px" value=<%=boardDto.getTitle() %>></td>
 									</tr>
-									
 									<tr>
 										<th>내용</th>
-										<td><textarea style="height: 300px; font-size: 18px" name="content"></textarea></td>
+										<td><textarea name="content" style="height: 300px; font-size: 18px"><%=boardDto.getContent() %></textarea></td>
 									</tr>
 								</table>
 								<div align="center">
