@@ -56,7 +56,7 @@ body {
 	font-size: 35px;
 	font-weight: bold;
 	position: relative;
-	left: 175px;
+	left: 240px;
 	top: 60px;
 }
 
