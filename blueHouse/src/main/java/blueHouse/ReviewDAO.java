@@ -139,5 +139,37 @@ public class ReviewDAO {
 			}
 		}
 	}
+	
+	public ArrayList<boardDTO> search(String search_keyword) {
+		String sql = "SELECT * FROM review_board WHERE name like ? ORDER BY num DESC";
+		ArrayList<boardDTO> boards = new ArrayList<boardDTO>();
+		
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1,  "%"+search_keyword+"%");
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				boardDTO boardDto = new boardDTO();
+				boardDto.setNum(rs.getInt("num"));
+				boardDto.setContent(rs.getString("content"));
+				boardDto.setName(rs.getString("name"));
+				boardDto.setId(rs.getString("id"));
+				boardDto.setWrite_date(rs.getInt("write_date"));
+				boards.add(boardDto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(rs != null) rs.close();
+				if(ps != null) ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return boards;
+	}
 
 }

@@ -146,7 +146,7 @@ public class IdeaDAO {
 	
 	//검색
 	public ArrayList<boardDTO> search(String search_keyword) {
-		String sql = "SELECT * FROM idea_board WHERE title like ? OR content like ? ORDER BY num DESC";
+		String sql = "SELECT * FROM idea_board WHERE title like ? OR name like ? ORDER BY num DESC";
 		System.out.println(search_keyword);
 		ArrayList<boardDTO> boards = new ArrayList<boardDTO>();
 		

@@ -9,25 +9,37 @@
 <%@include file="/header.jsp"%>
 
 <%
-	IdeaDAO ideaDao = new IdeaDAO();	
-	ArrayList<boardDTO> boards = ideaDao.selectAll();
+	request.setCharacterEncoding("utf-8");
+	
+	//검색
+	String mode = request.getParameter("mode");
+	String search_keyword = request.getParameter("search_keyword");
+		
+	IdeaDAO ideaDao = new IdeaDAO();
+	ArrayList<boardDTO> boards;
+	if(mode != null && mode.equals("search")){
+		if(search_keyword == null || search_keyword == ""){
+			out.print("<script>alert('검색어를 입력해 주세요.'); history.back();</script>");
+			return;
+		}
+		boards = ideaDao.search(search_keyword);
+	}else
+		boards = ideaDao.selectAll();
 	
 	//페이지
-	request.setCharacterEncoding("utf-8");
 	String pageNumber = request.getParameter("page");
-	int pagenum = Integer.parseInt(pageNumber);
 	
 	PageVO pageVo = new PageVO(5);
 	pageVo.setPageNumber(pageNumber);
 	pageVo.setTotalCount(boards.size());
+	int block = pageVo.getBlock();
 	
 	int nowpage = pageVo.getPageNumber();
 	int totalpage = pageVo.getTotalPage();
-	int size = (boards.size()-((pagenum-1) * 5));
 	
-	System.out.println(pageNumber);
+	int size = (boards.size()-((nowpage-1) * block));
 	
-	//검색
+	System.out.println("pageNumber" + pageNumber);
 	
 	
 %>
@@ -50,8 +62,6 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="https://www.opencheongwadae.kr/make-idea/redirect"
-						class="board-form plani-form" method="post" accept-charset="utf-8">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
 						<input type="hidden" name="redirect" value="/make-idea/index" style="display: none;"> 
@@ -83,7 +93,7 @@
 								</p>
 								<div class="bg"></div>
 							</div>
-							
+							<form action="make-idea.jsp?mode=search" method="post" >
 							<div class="bbs-search">
 								<div class="board_info"></div>
 								<div class="right-zone">
@@ -93,12 +103,13 @@
 									<button type="submit" class="pi-btn user-search left-import btn-search">
 										<span> 검색</span>
 									</button>
+								
 								</div>
 							</div>
-							
+							</form>
 							<div class="request plani-board-lists">
 								<p class="page cnt_area">
-									<span class="total">전체 <b><%=boards.size() %>건</b>
+									<span class="total"><a href="make-idea.jsp" style="list-style: none;">전체</a><b><%=boards.size() %>건</b>
 									</span> <span class="current">현재 페이지 <strong><%=nowpage %></strong>/<b><%=totalpage %></b></span>
 								</p>
 								<table class="bbs">
@@ -117,13 +128,18 @@
 									<% 
 										for(int i = pageVo.getStart(); i < pageVo.getEnd() && i < pageVo.getTotalCount(); i++){ 
 											boardDTO boardDto = boards.get(i);
+											int w_date = boardDto.getWrite_date();
+											int year = w_date / 10000;
+											int date = w_date % 10000;
+											int mon = date / 100;
+											int day = date % 100;
 									%>
 										<tr>
 											<td><%=size-- %></td>
 											<td class="left">
 												<a href="make-ideaView.jsp?num=<%=boardDto.getNum() %>"><%=boardDto.getTitle() %><i class="xi-lock-o board-icon"></i></a></td>
 											<td class="hidden2"><%=boardDto.getName() %></td>
-											<td><%=boardDto.getWrite_date() %></td>
+											<td><%=year+"."+mon+"."+day %></td>
 										</tr>
 									<% } %>
 									</tbody>
@@ -145,21 +161,21 @@
 												out.print("<li class='previous'><a href='#'><span class='hidden'>이전페이지</span><i class='xi-angle-left-thin'></i></a></li>");
 											}else{
 												int tmp = pageVo.getPageNumber() - 1;
-												out.print("<li class='previous'><a href='make-idea.jsp?page="+tmp+"'><span class='hidden'>이전페이지</span><i class='xi-angle-left-thin'></i></a></li>");
+												out.print("<li class='previous'><a href='make-idea.jsp?page="+tmp+"&mode="+mode+"&search_keyword="+search_keyword+"'><span class='hidden'>이전페이지</span><i class='xi-angle-left-thin'></i></a></li>");
 											} 
 											//현재 페이지
 											for(int i = 1; i <= pageVo.getTotalPage(); i++){
 											if(pageVo.getPageNumber() == i)
-												out.print("<li class='current'><a href='make-review.jsp?page="+i+"'><strong> "+ i +" </strong></li>");
+												out.print("<li class='current'><a href='make-idea.jsp?page="+i+"&mode="+mode+"&search_keyword="+search_keyword+"'><strong> "+ i +" </strong></li>");
 											else	
-												out.print("<li class=''><a href='make-review.jsp?page="+i+"'><strong> "+  i  +" </strong></a></li>");
+												out.print("<li class=''><a href='make-idea.jsp?page="+i+"&mode="+mode+"&search_keyword="+search_keyword+"'><strong> "+  i  +" </strong></a></li>");
 											}	
 											//다음 페이지
 											if(pageVo.getPageNumber() >= pageVo.getTotalPage()){
 												out.print("<li class='next'><a href='#'><span class='hidden'>다음페이지</span><i class='xi-angle-right-thin'></i></a></li>");
 											}else{
 												int tmp = pageVo.getPageNumber() + 1;
-												out.print("<li class='next'><a href='make-idea.jsp?page="+tmp+"'><span class='hidden'>다음페이지</span><i class='xi-angle-right-thin'></i></a></li>");
+												out.print("<li class='next'><a href='make-idea.jsp?page="+tmp+"&mode="+mode+"&search_keyword="+search_keyword+"'><span class='hidden'>다음페이지</span><i class='xi-angle-right-thin'></i></a></li>");
 											} 
 			
 										%>
@@ -173,7 +189,6 @@
 								<div class="label-button"></div>
 							</div>
 						</div>
-					</form>
 				</div>
 			</div>
 		</div>
