@@ -554,7 +554,7 @@
        <p class="a_tit "><2022.3.20 윤석열 당선인 인터뷰></p>
       </div>-->
 									<div class="img_box">
-										<img src="/_html/img/main/v_img02.jpg" alt="">
+										<img src="/blueHouse/img/homepage/v_img02.jpg" alt="">
 									</div>
 								</div>
 								<div class="v_item item3" style="display: none;">

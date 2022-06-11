@@ -20939,7 +20939,7 @@ form.save-form .type2 {
   height: 100%;
   left: 50%;
   top: 0;
-  background: url(../../_html/img/sub/idea_bg.jpg) center no-repeat;
+  background: url(/blueHouse/img/homepage/내가만드는청와대/국민아이디어제안/idea_bg.jpg) center no-repeat;
   background-size: cover;
   transform: translateX(-50%);
   z-index: -1
@@ -21097,7 +21097,7 @@ form.save-form .type2 {
   bottom: 0;
   width: 44.7rem;
   height: 9.8rem;
-  background: url(../../_html/img/sub/idea_img.png) right bottom no-repeat;
+  background: url(/blueHouse/img/homepage/내가만드는청와대/국민아이디어제안/idea_img.png) right bottom no-repeat;
   background-size: contain;
   z-index: -1
 }

@@ -317,7 +317,7 @@
                                 }
                             }
                             else if (res.GateOperationMode == "GATE") {
-                                window.location.href = "/blueHouse/member/mypage.jsp";
+                                window.location.href = "/blueHouse/reserve/reserveMain.jsp";
                             }
                         },
                         "FRONTEND",             // fixed

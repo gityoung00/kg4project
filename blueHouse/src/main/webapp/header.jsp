@@ -178,12 +178,12 @@
 				String id = (String) session.getAttribute("id");
 				if (id == null) {
 				%>
-				<a href="../member/login.jsp" class="global">MY<span
+				<a href="/blueHouse/member/login.jsp" class="global">MY<span
 					class="sr_only">로그인 페이지로 이동</span></a>
 				<%
 				} else {
 				%>
-				<a href="../member/mypage.jsp" class="global">MY<span
+				<a href="/blueHouse/member/mypage.jsp" class="global">MY<span
 					class="sr_only">마이페이지로 이동</span></a>
 				<%
 				}
