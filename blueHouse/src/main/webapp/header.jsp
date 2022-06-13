@@ -149,8 +149,6 @@
 								<li class="sub02 subfirst"><a
 									href="/blueHouse/homepage/index5/communicate-notice.jsp">공지사항</a>
 								</li>
-								<li class="sub03"><a
-									href="/blueHouse/homepage/index5/communicate-photo.jsp">미디어센터</a></li>
 								<li class="sub04"><a
 									href="/blueHouse/homepage/index5/communicate-faq.jsp">자주하는
 										질문</a></li>
