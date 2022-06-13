@@ -141,7 +141,7 @@ public class ReviewDAO {
 	}
 	
 	public ArrayList<boardDTO> search(String search_keyword) {
-		String sql = "SELECT * FROM review_board WHERE name like ? ORDER BY num DESC";
+		String sql = "SELECT * FROM review_board WHERE name like ? OR content like ? ORDER BY num DESC";
 		ArrayList<boardDTO> boards = new ArrayList<boardDTO>();
 		
 		PreparedStatement ps = null;
@@ -149,6 +149,7 @@ public class ReviewDAO {
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1,  "%"+search_keyword+"%");
+			ps.setString(2,  "%"+search_keyword+"%");
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				boardDTO boardDto = new boardDTO();

@@ -144,7 +144,7 @@
 		<header id="header" class="start">
 			<div class="header_wrap">
 				<h1 id="logo">
-					<a href="/blueHouse/test.jsp"> <img src="/blueHouse/img/logo.png"
+					<a href="/blueHouse/homepage/main.jsp"> <img src="/blueHouse/img/logo.png"
 						alt="청와대, 국민 품으로" class="n_ov"><img
 						src="/blueHouse/img/logo_black.png" alt="청와대, 국민 품으로" class="ov">
 					</a>
