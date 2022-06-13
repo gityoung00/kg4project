@@ -79,7 +79,7 @@
 							</p>
 							<p class="s_txt">감사합니다.</p>
 							<span class="sign" style="bottom: -7rem"><img
-								src="https://www.opencheongwadae.kr/_files/board/20220510//2a0f0df86c6d840a19ebc738aaccb021.png"
+								src="https://www.opencheongwadae.kr/_files/board/20220510/2a0f0df86c6d840a19ebc738aaccb021.png"
 								alt="대통령 윤석열"></span>
 						</div>
 					</div>
