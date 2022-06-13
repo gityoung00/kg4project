@@ -373,18 +373,6 @@
 									<li class="sub02 subfirst "><a
 										href="http://localhost:8085/blueHouse/homepage/index5/communicate-notice.jsp"><span>공지사항</span></a>
 									</li>
-									<li class="sub03 on"><a
-										href="http://localhost:8085/blueHouse/homepage/index5/communicate-photo.jsp"><span>미디어센터</span></a>
-										<ul class="depth3">
-											<li class="sub02 subfirst "><a
-												href="http://localhost:8085/blueHouse/homepage/index5/communicate-photo.jsp">사진</a>
-											</li>
-											<li class="sub03  "><a
-												href="http://localhost:8085/blueHouse/homepage/index5/communicate-video.jsp">영상</a></li>
-											<li class="sub04  "><a
-												href="http://localhost:8085/blueHouse/homepage/index5/communicate-news.jsp">카드뉴스</a>
-											</li>
-										</ul></li>
 									<li class="sub04  "><a
 										href="http://localhost:8085/blueHouse/homepage/index5/communicate-faq.jsp"><span>자주하는
 												질문</span></a></li>
