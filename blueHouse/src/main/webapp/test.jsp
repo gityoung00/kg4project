@@ -283,7 +283,7 @@ img {
 #popLayer span {
 	display: inline-block;
 	text-align: center;
-	font-size: 20px;
+	font-size: 17px;
 	padding: 53px 88px 28px;
 
 }

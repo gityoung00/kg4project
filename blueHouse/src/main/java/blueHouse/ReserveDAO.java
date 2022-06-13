@@ -44,7 +44,6 @@ public class ReserveDAO {
 
 	public ReserveDTO selectId(String id) {
 		
-		
 		String sql = "SELECT * FROM reserve WHERE id=?";
 		PreparedStatement ps = null;
 		ResultSet rs = null;

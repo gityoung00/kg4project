@@ -27,7 +27,7 @@
 </head>
 <body style="cursor: url(&quot;null&quot;), default;">
 	<div id="wrap">
-		<a id="to-home" data-cp="" href="/" tabindex="-1">청와대, 국민 품으로</a>
+		<a id="to-home" data-cp="" href="/blueHouse/test.jsp" tabindex="-1">청와대, 국민 품으로</a>
 		<div class="topR_menu">
 			<a href="/blueHouse/homepage/index3/sub1.jsp" target="_new">관람안내</a><a
 				href="/blueHouse/homepage/index5/communicate-faq.jsp" target="_new">자주묻는질문</a>
@@ -223,7 +223,7 @@
 						</div>
 					</form>
 					<a id="btn-booking" href="javascript:void(0)"
-						class="btn-bottom disabled" tabindex="7">관람 신청 등록</a>
+						class="btn-bottom" tabindex="7">관람 신청 등록</a>
 				</div>
 			</div>
 			<div id="page-expired"
