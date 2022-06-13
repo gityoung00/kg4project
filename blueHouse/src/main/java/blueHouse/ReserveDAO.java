@@ -18,16 +18,17 @@ public class ReserveDAO {
 
 	public void insert(ReserveDTO reserve) {
 
-		String sql = "INSERT INTO reserve VALUES(?,?,?,?,?)";
+		String sql = "INSERT INTO reserve VALUES(?,?,?,?,?,?)";
 
 		PreparedStatement ps = null;
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, reserve.getId());
-			ps.setString(2, reserve.getPw());
-			ps.setString(3, reserve.getName());
-			ps.setString(4, reserve.getTel());
-			ps.setString(5, reserve.getEmail());
+			ps.setInt(2, reserve.getCompany());
+			ps.setString(3, reserve.getSee_date());
+			ps.setInt(4, reserve.getSee_time());
+			ps.setString(5, reserve.getReq_date());
+			ps.setInt(6, reserve.getReserve_num());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -42,7 +43,8 @@ public class ReserveDAO {
 	}
 
 	public ReserveDTO selectId(String id) {
-
+		
+		
 		String sql = "SELECT * FROM reserve WHERE id=?";
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -54,10 +56,12 @@ public class ReserveDAO {
 			if (rs.next()) {
 				ReserveDTO reserve = new ReserveDTO();
 				reserve.setId(rs.getString("id"));
-				reserve.setPw(rs.getString("pw"));
-				reserve.setName(rs.getString("name"));
-				reserve.setEmail(rs.getString("email"));
-				reserve.setTel(rs.getString("tel"));
+				reserve.setReserve_num(rs.getInt("reserve_num"));
+				reserve.setCompany(rs.getInt("company"));
+				reserve.setSee_date(rs.getString("see_date"));
+				reserve.setSee_time(rs.getInt("see_time"));
+				reserve.setReq_date(rs.getString("req_date"));
+				System.out.println(reserve);
 				return reserve;
 			}
 		} catch (SQLException e) {
@@ -75,12 +79,33 @@ public class ReserveDAO {
 		return null;
 	}
 	
-	public int sumNum(int date) {
+	public int sumNum(int date, int time) {
+		String sql = "SELECT SUM(company) FROM reserve WHERE see_date=? AND see_time=?";
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, date);
+			ps.setInt(2, time);
+			rs = ps.executeQuery();
+			int sum = rs.getInt("sum(company)");
+			return sum;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (ps != null)
+					ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 		
+		return 9999;
 	}
 	
 	public void delete(ReserveDTO reserve) {
-		String sql = "DELETE FROM care WHERE id=?";
+		String sql = "DELETE FROM reserve WHERE id=?";
 		
 		PreparedStatement ps = null;
 		try {

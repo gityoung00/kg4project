@@ -29,8 +29,8 @@
 	<div id="wrap">
 		<a id="to-home" data-cp="" href="/" tabindex="-1">청와대, 국민 품으로</a>
 		<div class="topR_menu">
-			<a href="https://www.opencheongwadae.kr/sub0506" target="_new">관람안내</a><a
-				href="https://www.opencheongwadae.kr/communicate-faq" target="_new">자주묻는질문</a>
+			<a href="/blueHouse/homepage/index3/sub1.jsp" target="_new">관람안내</a><a
+				href="/blueHouse/homepage/index5/communicate-faq.jsp" target="_new">자주묻는질문</a>
 		</div>
 		<div id="container">
 			<header class="title">
@@ -68,7 +68,7 @@
 								제3자에게 양도하거나 유상으로 판매할 수 없으며, 필요 시 현장에서 신분증 확인을 요구할 수 있습니다.</li>
 						</ol>
 					</span>
-					<form id="form-certify"
+					<!-- <form id="form-certify"
 						action="https://www.kmcert.com/kmcis/web/kmcisReq.jsp"
 						method="post" target="KMCISWindow">
 						<input type="hidden" name="tr_cert"
@@ -76,7 +76,7 @@
 						<input type="hidden" name="tr_url"
 							value="https://reserve1.opencheongwadae.kr/certified"> <input
 							type="hidden" name="tr_add" value="N">
-					</form>
+					</form> -->
 					<form id="form-reservation" action="/reservation" method="post">
 						<input type="hidden" id="booking-id" name="booking-id"
 							value="9887eca4a0ce4f468884b3b8aeb4a2d8"> <input
@@ -124,7 +124,7 @@
 								</div>
 
 							</div>
-
+<!-- 
 							<h3 class="tit01">본인 인증</h3>
 							<div class="inner-box">
 								<button id="btn-certify" type="button" class="btn-append"
@@ -154,7 +154,7 @@
 									<label for="re-booking-pwd">비밀번호확인</label> <input
 										type="password" id="re-booking-pwd" maxlength="4" tabindex="3">
 								</div>
-							</div>
+							</div> -->
 
 							<h3 class="tit01">약관동의</h3>
 							<div class="agreement-box all-agree">
@@ -805,8 +805,6 @@
 				});
         		if (!bookingSe || !bookingTime) {
         			alert("날짜별 신청현황을 클릭하시셔서 예약일시를 선택하셔야 예약을 하실 수 있습니다.");	
-        		} else if (!bookerId) {
-        			alert("본인인증을 하셔야 예약을 하실 수 있습니다.");
         		} else if (!agreeResult) {
         			alert("약관에 모두 동의를 하셔야 예약을 하실 수 있습니다.");
         		}

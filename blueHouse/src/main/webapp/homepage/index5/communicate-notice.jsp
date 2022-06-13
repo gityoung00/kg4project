@@ -3,6 +3,11 @@
 
 <%@include file="/header.jsp"%>
 
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+
+
 <main id="main">
 	<div class="main_wrap">
 		<div id="contents">
