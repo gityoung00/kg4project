@@ -55,7 +55,12 @@
 				선택하여 주시기 바랍니다.<br> 이미 예약하신 분들은 "<font color="orange"><b>예약조회</b></font>"를
 				선택하여 예약을 확인해주시기 바랍니다.
 			</p>
-			<script>
+			
+			<div id="popLayer" style="display:none;">
+				<div>팝업 레이어입니다.</div>
+			<div>
+
+			
     
 </script>
 		</div>

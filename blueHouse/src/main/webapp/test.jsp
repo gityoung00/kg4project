@@ -20,262 +20,309 @@
     <meta property="og:title" content="청와대, 국민 품으로" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="청와대, 국민 품으로" /> -->
+<script
+	src="https://reserve1.opencheongwadae.kr/assets/js/jquery-3.6.0.min.js"></script>
+<script
+	src="https://reserve1.opencheongwadae.kr/assets/js/jquery.serialize.js"></script>
+<script
+	src="https://reserve1.opencheongwadae.kr/assets/jquery-ui/jquery-ui.js"></script>
 
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>청와대, 국민 품으로</title>
     <style>
-        html, body {
-            overflow: hidden;
-        }
+html, body {
+	overflow: hidden;
+}
 
+@import
+	url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css')
+	;
 
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+html {
+	font-size: 10px;
+}
 
-        html {
-            font-size: 10px;
-        }
+html, body {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%
+}
 
-        html, body {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            height: 100%
-        }
+body {
+	font-family: 'Pretendard Std', Pretendard, sans-serif;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	color: #333;
+	letter-spacing: -.05rem
+}
 
-        body {
-            font-family: 'Pretendard Std', Pretendard,sans-serif;
-            font-size: 1.8rem;
-            line-height: 1.6;
-            color: #333;
-            letter-spacing: -.05rem
-        }
+* {
+	margin: 0;
+	padding: 0
+}
 
-        * {
-            margin: 0;
-            padding: 0
-        }
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
 
-        a {
-            text-decoration: none;
-            cursor:pointer;
-        }
+li {
+	list-style: none
+}
 
-        li {
-            list-style: none
-        }
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto
+}
 
-        img {
-            border: 0;
-            max-width: 100%;
-            height: auto
-        }
+.landing {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 3rem;
+	background: url(img/landing_bg.jpg) center bottom -5rem no-repeat;
+	background-size: cover;
+	word-break: keep-all
+}
 
-        .landing {
-            position: relative;
-            min-height: 100%;
-            padding-bottom: 3rem;
-            background: url(img/landing_bg.jpg) center bottom -5rem no-repeat;
-            background-size: cover;
-            word-break: keep-all
-        }
+.landing .logo {
+	position: absolute;
+	left: 3.6rem;
+	top: 4.8rem
+}
 
-            .landing .logo {
-                position: absolute;
-                left: 3.6rem;
-                top: 4.8rem
-            }
+.landing_content {
+	padding-top: 17.2rem;
+	max-width: 84rem;
+	margin: 0 auto;
+	text-align: center
+}
 
-        .landing_content {
-            padding-top: 17.2rem;
-            max-width: 84rem;
-            margin: 0 auto;
-            text-align: center
-        }
+.landing_content .slogan {
+	margin-bottom: 3.8rem
+}
 
-            .landing_content .slogan {
-                margin-bottom: 3.8rem
-            }
+.landing_content>p {
+	font-size: 2.2rem;
+	line-height: 3.7rem;
+	font-weight: 500
+}
 
-            .landing_content > p {
-                font-size: 2.2rem;
-                line-height: 3.7rem;
-                font-weight: 500
-            }
+.landing .btns {
+	margin-top: 5rem
+}
 
-        .landing .btns {
-            margin-top: 5rem
-        }
+.landing .btns .btns_l {
+	float: left;
+	width: 19.5rem;
+	margin-right: 1.2rem
+}
 
-            .landing .btns .btns_l {
-                float: left;
-                width: 19.5rem;
-                margin-right: 1.2rem
-            }
+.landing .btns .btns_r {
+	overflow: hidden
+}
 
-            .landing .btns .btns_r {
-                overflow: hidden
-            }
+.landing .btns .btns_l .btn.def_btn {
+	height: 9.4rem;
+	line-height: 7.4rem
+}
 
-            .landing .btns .btns_l .btn.def_btn {
-                height: 9.4rem;
-                line-height: 7.4rem
-            }
+.landing .btns .btn {
+	display: inline-block;
+	padding: 1rem 2.8rem;
+	border-radius: 1rem;
+	text-align: center;
+	font-size: 2rem;
+	color: #fff;
+	background: #0D9AB4;
+	font-weight: 600;
+	box-sizing: border-box;
+}
 
-            .landing .btns .btn {
-                display: inline-block;
-                padding: 1rem 2.8rem;
-                border-radius: 1rem;
-                text-align: center;
-                font-size: 2rem;
-                color: #fff;
-                background: #0D9AB4;
-                font-weight: 600;
-                box-sizing: border-box;
-            }
+.landing .btns .btn.c2 {
+	background: #F74763
+}
 
-                .landing .btns .btn.c2 {
-                    background: #F74763
-                }
+.landing .btns.t2 {
+	margin-top: 4rem
+}
 
-            .landing .btns.t2 {
-                margin-top: 4rem
-            }
+.landing .btns.t2 .btn {
+	width: 100%;
+	max-width: 30rem;
+	margin: .5rem;
+	padding: 3.5rem 2rem;
+	font-size: 2.8rem;
+	border: .2rem solid transparent;
+	transition: all .3s
+}
 
-                .landing .btns.t2 .btn {
-                    width: 100%;
-                    max-width: 30rem;
-                    margin: .5rem;
-                    padding: 3.5rem 2rem;
-                    font-size: 2.8rem;
-                    border: .2rem solid transparent;
-                    transition: all .3s
-                }
+.landing .btns.t2 .btn:hover {
+	border-color: #0D9AB4;
+	background: #fff;
+	color: #0D9AB4
+}
 
-                    .landing .btns.t2 .btn:hover {
-                        border-color: #0D9AB4;
-                        background: #fff;
-                        color: #0D9AB4
-                    }
+.landing .btns.t2 .btn.c2:hover {
+	border-color: #F74763;
+	color: #F74763
+}
 
-                    .landing .btns.t2 .btn.c2:hover {
-                        border-color: #F74763;
-                        color: #F74763
-                    }
+.btns_r .list {
+	padding: 2rem 2rem 2rem 5rem;
+	border: 2px solid #189DB5;
+	background: #fff;
+	border-radius: 1.2rem
+}
 
-        .btns_r .list {
-            padding: 2rem 2rem 2rem 5rem;
-            border: 2px solid #189DB5;
-            background: #fff;
-            border-radius: 1.2rem
-        }
+.btns_r .list:after {
+	content: "";
+	display: block;
+	clear: both
+}
 
-            .btns_r .list:after {
-                content: "";
-                display: block;
-                clear: both
-            }
+.btns_r .list>li {
+	float: left;
+	width: 33.3%
+}
 
-            .btns_r .list > li {
-                float: left;
-                width: 33.3%
-            }
+.btns_r .list>li>a {
+	display: block;
+	overflow: hidden
+}
 
-                .btns_r .list > li > a {
-                    display: block;
-                    overflow: hidden
-                }
+.btns_r .list>li>a>i {
+	float: left;
+	width: 5rem;
+	height: 5rem;
+	margin-right: 1.2rem
+}
 
-                    .btns_r .list > li > a > i {
-                        float: left;
-                        width: 5rem;
-                        height: 5rem;
-                        margin-right: 1.2rem
-                    }
+.btns_r .list>li>a>strong {
+	overflow: hidden;
+	display: block;
+	font-size: 1.9rem;
+	color: #222222;
+	line-height: 2.5rem;
+	font-weight: 600;
+	text-align: left
+}
 
-                    .btns_r .list > li > a > strong {
-                        overflow: hidden;
-                        display: block;
-                        font-size: 1.9rem;
-                        color: #222222;
-                        line-height: 2.5rem;
-                        font-weight: 600;
-                        text-align: left
-                    }
+@media ( max-width : 1280px) {
+	html {
+		font-size: 9px
+	}
+}
 
+@media ( max-width : 768px) {
+	html {
+		font-size: 8px
+	}
+}
 
-        @media (max-width: 1280px) {
-            html {
-                font-size: 9px
-            }
-        }
+@media ( max-width :690px) {
+	.landing_content {
+		padding: 12rem 1rem 0
+	}
+	.landing_content>p br {
+		display: none
+	}
+}
 
-        @media (max-width: 768px) {
-            html {
-                font-size: 8px
-            }
-        }
+@media ( max-width :640px) {
+	.landing .logo {
+		height: 3rem;
+		left: 50%;
+		top: 3rem;
+		transform: translateX(-50%)
+	}
+	.landing_content>p br {
+		display: none
+	}
+	.landing_content .slogan {
+		height: 5rem
+	}
+	.landing .btns {
+		padding: 0 1rem
+	}
+	.landing .btns .btns_l {
+		float: none;
+		width: 100%;
+		margin-bottom: 1rem
+	}
+	.landing .btns .btns_l .btn.def_btn {
+		width: 100%
+	}
+	.btns_r .list {
+		padding: 2rem
+	}
+	.btns_r .list>li {
+		width: 100%;
+		margin-top: 1.5rem
+	}
+	.btns_r .list>li:first-child {
+		margin-top: 0
+	}
+	.btns_r .list>li>a>strong {
+		padding-top: 1rem
+	}
+	.btns_r .list>li>a>strong br {
+		display: none
+	}
+}
 
-        @media (max-width:690px) {
-            .landing_content {
-                padding: 12rem 1rem 0
-            }
+#popLayer {
+	width: 500px;
+	height: 200px;
+	background-color: #FFF;
+	border-radius: 10px;
+	border: 4px solid #0D9AB4;
+	 box-shadow: 1px 1px 50px 10000px rgba(0,0,0, 0.3);
+}
 
-                .landing_content > p br {
-                    display: none
-                }
-        }
+#popLayer span {
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	padding: 53px 88px 28px;
 
-        @media (max-width:640px) {
-            .landing .logo {
-                height: 3rem;
-                left: 50%;
-                top: 3rem;
-                transform: translateX(-50%)
-            }
+}
 
-            .landing_content > p br {
-                display: none
-            }
+.layerBtn {
+	width: 400px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
 
-            .landing_content .slogan {
-                height: 5rem
-            }
+.layerBtn input {
+	width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background: #0D9AB4;
+    border: 2px solid #0D9AB4;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-            .landing .btns {
-                padding: 0 1rem
-            }
+.layerBtn .decline {
+	background-color: #F74763;
+    border: 2px solid #F74763;
+    margin-left: 15px;
+}
 
-                .landing .btns .btns_l {
-                    float: none;
-                    width: 100%;
-                    margin-bottom: 1rem
-                }
+.layerBtn .decline:hover {
+	background-color: #fff;
+	color: #F74763;
+}
+.layerBtn .accept:hover {
+	background-color: #fff;
+	color: #0D9AB4;
+}
 
-                    .landing .btns .btns_l .btn.def_btn {
-                        width: 100%
-                    }
-
-            .btns_r .list {
-                padding: 2rem
-            }
-
-                .btns_r .list > li {
-                    width: 100%;
-                    margin-top: 1.5rem
-                }
-
-                    .btns_r .list > li:first-child {
-                        margin-top: 0
-                    }
-
-                    .btns_r .list > li > a > strong {
-                        padding-top: 1rem
-                    }
-
-                        .btns_r .list > li > a > strong br {
-                            display: none
-                        }
-        }
-    </style>
+</style>
 </head>
 <body class="main_layout">
 
@@ -294,10 +341,37 @@
 
             <div class="btns t2">
                 <a href="/blueHouse/homepage/main.jsp" class="btn def_btn">홈페이지 바로가기</a>
+                <% String id = (String)session.getAttribute("id");
+                	if(id == null) {
+                %>
+                <a id="reserve-nolink" class="btn def_btn c2" onclick="javascript:showPopup()">관람신청 바로가기</a>
+                <%}else { %>
                 <a id="reserve-link" class="btn def_btn c2">관람신청 바로가기</a>
+                <%} %>
             </div>
         </div>
     </div>
+    
+	<div id="popLayer" style="display: none;">
+		<div>
+			<span>
+			로그인 후 이용하실 수 있는 서비스 입니다.<br>
+			<b>로그인 하시겠습니까?</b>
+			</span>
+			<div class="layerBtn">
+				<input type="button" class="accept" onclick="javascript:loginHref();" value="예">
+				<input type="button" class="decline" onclick="javascript:closePopup();" value="아니오">
+			</div>
+		</div>
+	</div>
+    
+    
+    
+    
+    
+    
+    
+    
 
     <script src="https://cdn.opencheongwadae.kr/js/webgate-index.js?v=3"></script>
     <script>
@@ -329,6 +403,29 @@
                     );
                 });
         });
-    </script>
+        
+        jQuery.fn.center = function () {
+            this.css("position","absolute");
+            this.css("display")
+            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+            return this;
+        }
+        
+        showPopup = function() {
+        	$("#popLayer").show();
+        	$("#popLayer").center();
+        	
+        }
+       
+        closePopup = function() {
+        	$("#popLayer").hide();
+        }
+        
+        loginHref = function() {
+        	var url = "/blueHouse/member/login.jsp";    
+        	$(location).attr('href',url);
+        }
+	</script>
 </body>
 </html>
