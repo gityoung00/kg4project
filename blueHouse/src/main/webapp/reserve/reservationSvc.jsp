@@ -3,9 +3,12 @@
     
  <%
  	String id = (String)session.getAttribute("id");
- 	String name = (String)session.getAttribute("name");
+ 	String reserve_num = "";
+ 	int company = Integer.parseInt(request.getParameter("company"));
+ 	LocalTime time = new LocalDateTime();
  	
- 
+ 	
+ 	
  
  
  

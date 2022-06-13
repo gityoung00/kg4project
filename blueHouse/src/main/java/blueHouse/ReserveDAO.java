@@ -18,16 +18,17 @@ public class ReserveDAO {
 
 	public void insert(ReserveDTO reserve) {
 
-		String sql = "INSERT INTO reserve VALUES(reserve_seq,?,?,?,?,?)";
+		String sql = "INSERT INTO reserve VALUES(?,?,?,?,?,?)";
 
 		PreparedStatement ps = null;
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, reserve.getId());
 			ps.setInt(2, reserve.getCompany());
-			ps.setInt(3, reserve.getSee_date());
+			ps.setString(3, reserve.getSee_date());
 			ps.setInt(4, reserve.getSee_time());
 			ps.setString(5, reserve.getReq_date());
+			ps.setInt(6, reserve.getReserve_num());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -42,8 +43,9 @@ public class ReserveDAO {
 	}
 
 	public ReserveDTO selectId(String id) {
-
-		String sql = "SELECT * FROM reserve WHERE reserve_num=?";
+		
+		
+		String sql = "SELECT * FROM reserve WHERE id=?";
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
@@ -54,10 +56,12 @@ public class ReserveDAO {
 			if (rs.next()) {
 				ReserveDTO reserve = new ReserveDTO();
 				reserve.setId(rs.getString("id"));
+				reserve.setReserve_num(rs.getInt("reserve_num"));
 				reserve.setCompany(rs.getInt("company"));
-				reserve.setSee_date(rs.getInt("see_date"));
+				reserve.setSee_date(rs.getString("see_date"));
 				reserve.setSee_time(rs.getInt("see_time"));
 				reserve.setReq_date(rs.getString("req_date"));
+				System.out.println(reserve);
 				return reserve;
 			}
 		} catch (SQLException e) {
