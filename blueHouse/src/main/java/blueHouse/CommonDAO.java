@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class CommonDAO {
 	
-	private static String url ="jdbc:oracle:thin:@bluehouse_high?TNS_ADMIN=/Users/gayeonkim/Wallet_bluehouse";
+	private static String url ="jdbc:oracle:thin:@bluehouse_high?TNS_ADMIN=C:/Users/이나경/Downloads/Wallet_bluehouse";
 	private static String user = "admin";
 	private static String pwd = "Bluehouse1234";
 	
