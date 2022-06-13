@@ -181,5 +181,5 @@ input[type=button] {
 
 		</div>
 	</div>
-
+</div>
 <%@include file="../footer.jsp" %>
