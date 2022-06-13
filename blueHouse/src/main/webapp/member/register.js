@@ -101,16 +101,16 @@ function nameCheck() {
 	msg.style.fontSize = "11px";
 	msg.style.position = "relative";
 	msg.style.left = "10px";
+	msg.style.color = "red";
 	
 	/*console.log(name);*/
 	
 	if (name == "") {
-		msg.style.color = "red";
 		msg.innerHTML = "필수 정보입니다.";
 		return;
 	}
 
-	var nonchar = /[^가-힣a-zA-Z0-9]/gi;
+	var nonchar = /[^가-힣a-zA-Z]/gi;
 	if (nonchar.test(name)) {
 		msg.innerHTML = "한글과 영문 대 소문자를 사용하세요. (특수기호, 공백 사용 불가)";
 		return;

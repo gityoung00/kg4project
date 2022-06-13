@@ -18,8 +18,12 @@
 		return;
 	}
 
-	if(title == ""){
+	if(title == null || title == ""){
 		out.print("<script>alert('제목을 써주세요!'); history.back(); </script>");
+		return ;
+	}
+	if(content == null || content == ""){
+		out.print("<script>alert('내용을 써주세요!'); history.back(); </script>");
 		return ;
 	}
 	
@@ -37,4 +41,4 @@
 	IdeaDAO ideaDao = new IdeaDAO();
 	ideaDao.write(boardDto); 
 %>
-<script>alert('게시글 작성 완료'); location.href='make-idea.jsp';</script>
+<script>alert('아이디어 작성이 완료되었습니다'); location.href='make-idea.jsp';</script>

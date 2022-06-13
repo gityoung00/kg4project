@@ -5,7 +5,7 @@ public class ReserveDTO {
 	private int reserve_num;
 	private String id;
 	private int company;
-	private int see_date;
+	private String see_date;
 	private int see_time;
 	private String req_date;
 	
@@ -27,10 +27,10 @@ public class ReserveDTO {
 	public void setCompany(int company) {
 		this.company = company;
 	}
-	public int getSee_date() {
+	public String getSee_date() {
 		return see_date;
 	}
-	public void setSee_date(int see_date) {
+	public void setSee_date(String see_date) {
 		this.see_date = see_date;
 	}
 	public int getSee_time() {

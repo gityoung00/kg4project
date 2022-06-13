@@ -56,7 +56,7 @@ body {
 	font-size: 35px;
 	font-weight: bold;
 	position: relative;
-	left: 175px;
+	left: 240px;
 	top: 60px;
 }
 
@@ -182,5 +182,4 @@ input[type=button] {
 		</div>
 	</div>
 </div>
-
 <%@include file="../footer.jsp" %>

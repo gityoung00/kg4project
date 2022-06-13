@@ -23,8 +23,7 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="make-ideaWriteSvc.jsp"
-						class="board-form plani-form" method="post" accept-charset="utf-8">
+					<form action="make-ideaWriteSvc.jsp" class="board-form plani-form" method="post" accept-charset="utf-8">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
 						<input type="hidden" name="redirect" value="/make-idea/index" style="display: none;"> 
