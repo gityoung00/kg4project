@@ -75,6 +75,40 @@ public class MemberDAO {
 		}
 		return null;
 	}
+	
+	public MemberDTO selectName(String name) {
+
+		String sql = "SELECT * FROM member WHERE name=?";
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			ps = con.prepareStatement(sql);
+			System.out.println(ps);
+			ps.setString(1, name);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				MemberDTO member = new MemberDTO();
+				member.setId(rs.getString("id"));
+				member.setPw(rs.getString("pw"));
+				member.setName(rs.getString("name"));
+				member.setEmail(rs.getString("email"));
+				member.setTel(rs.getString("tel"));
+				return member;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (ps != null)
+					ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
 
 	public void update(MemberDTO member) {
 		String sql = "UPDATE member SET pw=?, name=?, email=?, tel=? WHERE id=?";
