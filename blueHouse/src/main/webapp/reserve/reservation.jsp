@@ -1,5 +1,36 @@
+<%@page import="blueHouse.ReserveDTO"%>
+<%@page import="blueHouse.ReserveDAO"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%
+	String id = (String)session.getAttribute("id");
+
+	if(id == null) {
+		out.print("<script>alert('로그인이 만료되었습니다. 다시 로그인해주세요.'); location.href='../test.jsp'</script>");
+	}
+	SimpleDateFormat dateFormat = new SimpleDateFormat("M.dd"); //년월 표시
+	SimpleDateFormat recordFormat = new SimpleDateFormat("yyyyMMdd");
+	
+	Calendar cal = Calendar.getInstance();
+	int today = Integer.parseInt(recordFormat.format(cal.getTime()));
+	
+	ReserveDAO reserveDao = new ReserveDAO();
+	ReserveDTO myReserve = reserveDao.selectId(id);
+	System.out.print(myReserve.getSee_date() + " // " + today);
+	if(myReserve != null && today < myReserve.getSee_date()) {
+		out.print("<script>alert('예약 정보가 존재합니다.'); history.back();</script>");
+	}
+	if(myReserve != null && today >= myReserve.getSee_date()) {
+		out.print("<script>alert('기존 예약 정보를 삭제합니다.')</script>");
+		reserveDao.delete(myReserve);
+	}
+	
+
+
+%>	
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -9,6 +40,7 @@
 <meta http-equiv="Expires" content="0">
 <meta http-equiv="Pragma" content="no-cache">
 <title>청와대, 국민 품으로</title>
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon"
 	href="https://reserve1.opencheongwadae.kr/assets/images/favicon.png"
 	type="image/x-icon">
@@ -68,18 +100,9 @@
 								제3자에게 양도하거나 유상으로 판매할 수 없으며, 필요 시 현장에서 신분증 확인을 요구할 수 있습니다.</li>
 						</ol>
 					</span>
-					<!-- <form id="form-certify"
-						action="https://www.kmcert.com/kmcis/web/kmcisReq.jsp"
-						method="post" target="KMCISWindow">
-						<input type="hidden" name="tr_cert"
-							value="KMC000001-A1E8DEB9BF66DDB9C10B95A1A06452B5CE796DC489763FD2D7F694C0B905B21076286131D819CA2CDF3AAC9C560BEED227310A2ECF32BB58CBE6E2C67F2F84724CBD320FC67773CD648C487FF4FC338D9C2CE36EC3948ED02DD3BCBA0371C2CC24A790465B11F9CCC9486914EE17BAE966386B9929FD4EDE2B21799334FD6D8EAAF33B3FEE2A75C85621FEC2B413188C2A4A78813E12DE74BBC164FEAF2E89F21A4051AF5C9926AA118EC19D473E1829154CA2ED33F55BB917F210707B094DECD5D04C0D9A0AB0496FE3AC67A3F866873C31C51DC1D5031ECA3D36496CA84A34BEF378EB919334BFEAA4AE505EBBED4D75600FBE69A5C196A454C0616DA5B14F61509EF05893C4DD1B1E646E645BF5783981A4529E4CD5C07B9EE524665E406F">
-						<input type="hidden" name="tr_url"
-							value="https://reserve1.opencheongwadae.kr/certified"> <input
-							type="hidden" name="tr_add" value="N">
-					</form> -->
-					<form id="form-reservation" action="/reservation" method="post">
+					<form id="form-reservation" action="reservationSvc.jsp" method="post">
 						<input type="hidden" id="booking-id" name="booking-id"
-							value="9887eca4a0ce4f468884b3b8aeb4a2d8"> <input
+							value="<%=id%>"> <input
 							type="hidden" id="booker-id" name="booker-id"> <input
 							type="hidden" id="booking-se" name="booking-se"> <input
 							type="hidden" id="booking-time" name="booking-time">
@@ -124,37 +147,6 @@
 								</div>
 
 							</div>
-<!-- 
-							<h3 class="tit01">본인 인증</h3>
-							<div class="inner-box">
-								<button id="btn-certify" type="button" class="btn-append"
-									tabindex="1">휴대폰 본인 인증하기</button>
-								<p id="msg-certified" class="certify-txt" style="display: none">본인
-									인증이 완료되었습니다.</p>
-							</div>
-							<div class="inner-box">
-								<div class="inner-list">
-									<label for="phone-name">이름</label> <input type="text"
-										id="phone-name" name="phone-name" readonly="readonly"
-										tabindex="-1">
-								</div>
-								<div class="inner-list">
-									<label for="phone-no">전화번호</label> <input type="text"
-										id="phone-no" name="phone-no" readonly="readonly"
-										tabindex="-1">
-								</div>
-							</div>
-							<div class="pwd-cont">
-								<div class="inner-list">
-									<label for="booking-pwd">비밀번호 (숫자4자리)</label> <input
-										type="password" id="booking-pwd" name="booking-pwd"
-										maxlength="4" tabindex="2">
-								</div>
-								<div class="inner-list">
-									<label for="re-booking-pwd">비밀번호확인</label> <input
-										type="password" id="re-booking-pwd" maxlength="4" tabindex="3">
-								</div>
-							</div> -->
 
 							<h3 class="tit01">약관동의</h3>
 							<div class="agreement-box all-agree">
@@ -274,238 +266,61 @@
 											</tr>
 										</thead>
 										<tbody>
-											<tr data-date="20220612">
-												<td>6.12 (일)</td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-											</tr>
-											<tr data-date="20220613">
-												<td>6.13 (월)</td>
-												<td class="on"><span>3,103</span></td>
-												<td><span>예약완료</span></td>
-												<td class="on"><span>2,374</span></td>
-												<td class="on"><span>1,973</span></td>
-												<td class="on"><span>3,649</span></td>
-												<td class="on"><span>3,957</span></td>
-											</tr>
-											<tr data-date="20220614">
-												<td>6.14 (화)</td>
+<%
+	final String[] dayKor = { "", "일", "월", "화", "수", "목", "금", "토" };
+	
+	cal.set(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), (cal.get(Calendar.DAY_OF_MONTH))); //시작 날짜 셋팅
+	String startDate = dateFormat.format(cal.getTime());
+	
+	cal.add(Calendar.DAY_OF_MONTH, 2);
+	String endDate = dateFormat.format(cal.getTime());
+	
+	cal.add(Calendar.DAY_OF_MONTH, -2);
+	
+	int i = 0;
+	
+	while (!startDate.equals(endDate)) {
+		cal.add(Calendar.DATE, 1);
+		startDate = dateFormat.format(cal.getTime());
+		String korDate = dayKor[cal.get(Calendar.DAY_OF_WEEK)];
+		String trValue = recordFormat.format(cal.getTime());
+		String tdValue = dateFormat.format(cal.getTime());
+		if (korDate == "화") {%>
+											<tr data-date="<%=trValue%>">
+												<td><%=tdValue + " (" + korDate +")"%></td>
 												<td class="off" colspan="6">휴관</td>
 											</tr>
-											<tr data-date="20220615">
-												<td>6.15 (수)</td>
-												<td class="on"><span>4,489</span></td>
+	
+<%
+		} else {
+%>
+											<tr data-date="<%=trValue%>">
+												<td><%=tdValue + " (" + korDate +")"%></td>
+<%	
+				int trValue_int = Integer.parseInt(trValue);
+				for(int j=1; j<=6 ;j++){
+					int sumNum = 6500 - reserveDao.sumNum(trValue_int, j);
+					if(sumNum == 0){
+%>
 												<td><span>예약완료</span></td>
-												<td class="on"><span>3,551</span></td>
-												<td class="on"><span>2,831</span></td>
-												<td class="on"><span>3,945</span></td>
-												<td class="on"><span>4,734</span></td>
+<% 
+					}else{
+%>											
+												<td class="on"><span><%=sumNum %></span></td>
+												
+<%					} 
+				}
+%>												
 											</tr>
-											<tr data-date="20220616">
-												<td>6.16 (목)</td>
-												<td class="on"><span>4,841</span></td>
-												<td class="on"><span>637</span></td>
-												<td class="on"><span>4,421</span></td>
-												<td class="on"><span>3,923</span></td>
-												<td class="on"><span>4,515</span></td>
-												<td class="on"><span>4,779</span></td>
-											</tr>
-											<tr data-date="20220617">
-												<td>6.17 (금)</td>
-												<td class="on"><span>4,987</span></td>
-												<td class="on"><span>1,452</span></td>
-												<td class="on"><span>4,620</span></td>
-												<td class="on"><span>4,049</span></td>
-												<td class="on"><span>3,489</span></td>
-												<td class="on"><span>1,951</span></td>
-											</tr>
-											<tr data-date="20220618">
-												<td>6.18 (토)</td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-											</tr>
-											<tr data-date="20220619">
-												<td>6.19 (일)</td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-											</tr>
-											<tr data-date="20220620">
-												<td>6.20 (월)</td>
-												<td class="on"><span>5,267</span></td>
-												<td class="on"><span>2,997</span></td>
-												<td class="on"><span>4,942</span></td>
-												<td class="on"><span>4,842</span></td>
-												<td class="on"><span>5,230</span></td>
-												<td class="on"><span>5,332</span></td>
-											</tr>
-											<tr data-date="20220621">
-												<td>6.21 (화)</td>
-												<td class="off" colspan="6">휴관</td>
-											</tr>
-											<tr data-date="20220622">
-												<td>6.22 (수)</td>
-												<td class="on"><span>5,562</span></td>
-												<td class="on"><span>3,470</span></td>
-												<td class="on"><span>5,137</span></td>
-												<td class="on"><span>4,827</span></td>
-												<td class="on"><span>5,029</span></td>
-												<td class="on"><span>5,572</span></td>
-											</tr>
-											<tr data-date="20220623">
-												<td>6.23 (목)</td>
-												<td class="on"><span>5,610</span></td>
-												<td class="on"><span>4,247</span></td>
-												<td class="on"><span>5,493</span></td>
-												<td class="on"><span>4,869</span></td>
-												<td class="on"><span>5,356</span></td>
-												<td class="on"><span>5,701</span></td>
-											</tr>
-											<tr data-date="20220624">
-												<td>6.24 (금)</td>
-												<td class="on"><span>5,524</span></td>
-												<td class="on"><span>3,985</span></td>
-												<td class="on"><span>5,515</span></td>
-												<td class="on"><span>5,124</span></td>
-												<td class="on"><span>4,710</span></td>
-												<td class="on"><span>5,067</span></td>
-											</tr>
-											<tr data-date="20220625">
-												<td>6.25 (토)</td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-											</tr>
-											<tr data-date="20220626">
-												<td>6.26 (일)</td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td class="on"><span>1</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-											</tr>
-											<tr data-date="20220627">
-												<td>6.27 (월)</td>
-												<td class="on"><span>5,749</span></td>
-												<td class="on"><span>4,880</span></td>
-												<td class="on"><span>5,578</span></td>
-												<td class="on"><span>5,514</span></td>
-												<td class="on"><span>5,689</span></td>
-												<td class="on"><span>5,711</span></td>
-											</tr>
-											<tr data-date="20220628">
-												<td>6.28 (화)</td>
-												<td class="off" colspan="6">휴관</td>
-											</tr>
-											<tr data-date="20220629">
-												<td>6.29 (수)</td>
-												<td class="on"><span>5,815</span></td>
-												<td class="on"><span>4,942</span></td>
-												<td class="on"><span>5,847</span></td>
-												<td class="on"><span>5,502</span></td>
-												<td class="on"><span>5,668</span></td>
-												<td class="on"><span>5,914</span></td>
-											</tr>
-											<tr data-date="20220630">
-												<td>6.30 (목)</td>
-												<td class="on"><span>5,952</span></td>
-												<td class="on"><span>5,361</span></td>
-												<td class="on"><span>5,914</span></td>
-												<td class="on"><span>5,529</span></td>
-												<td class="on"><span>5,764</span></td>
-												<td class="on"><span>5,986</span></td>
-											</tr>
-											<tr data-date="20220701">
-												<td>7.01 (금)</td>
-												<td class="on"><span>5,926</span></td>
-												<td class="on"><span>5,444</span></td>
-												<td class="on"><span>6,015</span></td>
-												<td class="on"><span>5,660</span></td>
-												<td class="on"><span>5,717</span></td>
-												<td class="on"><span>5,735</span></td>
-											</tr>
-											<tr data-date="20220702">
-												<td>7.02 (토)</td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-												<td><span>예약완료</span></td>
-											</tr>
-											<tr data-date="20220703">
-												<td>7.03 (일)</td>
-												<td class="on"><span>2,215</span></td>
-												<td><span>예약완료</span></td>
-												<td class="on"><span>897</span></td>
-												<td class="on"><span>1,928</span></td>
-												<td class="on"><span>3,364</span></td>
-												<td class="on"><span>4,441</span></td>
-											</tr>
-											<tr data-date="20220704">
-												<td>7.04 (월)</td>
-												<td class="on"><span>6,023</span></td>
-												<td class="on"><span>5,852</span></td>
-												<td class="on"><span>6,037</span></td>
-												<td class="on"><span>5,737</span></td>
-												<td class="on"><span>6,067</span></td>
-												<td class="on"><span>6,075</span></td>
-											</tr>
-											<tr data-date="20220705">
-												<td>7.05 (화)</td>
-												<td class="off" colspan="6">휴관</td>
-											</tr>
-											<tr data-date="20220706">
-												<td>7.06 (수)</td>
-												<td class="on"><span>5,799</span></td>
-												<td class="on"><span>5,852</span></td>
-												<td class="on"><span>6,098</span></td>
-												<td class="on"><span>5,939</span></td>
-												<td class="on"><span>5,992</span></td>
-												<td class="on"><span>6,124</span></td>
-											</tr>
-											<tr data-date="20220707">
-												<td>7.07 (목)</td>
-												<td class="on"><span>6,117</span></td>
-												<td class="on"><span>5,790</span></td>
-												<td class="on"><span>6,087</span></td>
-												<td class="on"><span>5,977</span></td>
-												<td class="on"><span>6,072</span></td>
-												<td class="on"><span>6,097</span></td>
-											</tr>
-											<tr data-date="20220708">
-												<td>7.08 (금)</td>
-												<td class="on"><span>6,031</span></td>
-												<td class="on"><span>5,944</span></td>
-												<td class="on"><span>6,079</span></td>
-												<td class="on"><span>5,981</span></td>
-												<td class="on"><span>6,024</span></td>
-												<td class="on"><span>6,027</span></td>
-											</tr>
-											<tr data-date="20220709">
-												<td>7.09 (토)</td>
-												<td class="on"><span>4,540</span></td>
-												<td><span>예약완료</span></td>
-												<td class="on"><span>4,130</span></td>
-												<td class="on"><span>3,219</span></td>
-												<td class="on"><span>3,730</span></td>
-												<td class="on"><span>2,927</span></td>
-											</tr>
+		
+<% 
+		}
+	
+		i++;
+	
+	}
+%>
+											
 										</tbody>
 									</table>
 								</div>
@@ -604,7 +419,7 @@
 		
 	})
 	// 인증관련처리
-	$(function() {
+/* 	$(function() {
 	    window.name = "blue_house_reservation";
 	    $("#btn-certify").on("click", function() {
 	    	var UserAgent = navigator.userAgent;
@@ -645,7 +460,7 @@
 			// 인증 종료후 validation
 			$.validate();
 	    }
-	})
+	}) */
     $(function() {
         var $form = $("#form-reservation");
         var $formNumber = $form.find(".inner-list.inner-list2");
@@ -770,30 +585,9 @@
         $("#btn-booking").on("click", function() {
         	var isDisabled = $("#btn-booking").hasClass("disabled");
         	if (!isDisabled) {
+        		 var data = $("#form-reservation").serializeObject();
+                 var url = $("#form-reservation").prop("action");
             	// 입력이 모두 끝난경우
-    			var pwd = $("#booking-pwd").val();
-    			var repwd = $("#re-booking-pwd").val();
-            	if (pwd == repwd) {
-                    var data = $("#form-reservation").serializeObject();
-                    var url = $("#form-reservation").prop("action");
-                    
-                    $.rta.post(url, data).done(function(res) {
-                        if (res && res.code == 200 && res.data.successYn) {
-                        	location.href = cp + "/reserved/" + res.data.bookingId;
-                        } else if (res && res.code == 501) {
-                        	alert("관람이 끝나지 않은 예약이 존재합니다. 관람 후 다시 예약해 주세요!!!");
-                        } else if (res && res.code == 502) {
-                        	alert("현재보다 과거를 예약할 수 없습니다 !!!");
-                        } else if (res && res.code == 503) {
-                        	alert("예약가능한 인원수를 범위가 아닙니다 !!!");
-                        } else {
-                        	alert("예약 중에 에러가 발생하였습니다. 잠시 후에 다시 시도해 주세요!!!");
-                        }
-                    });
-            	} else {
-            		alert("패스워드가 일치하지 않습니다.")
-            	}
-        	} else {
         		var agree = ["privacy-collection", "privacy-offer", "alarm-reception"];
         		// 입력이 끝나지 않은 경우의 알림
         		var bookerId = $("#booker-id").val();
@@ -807,6 +601,8 @@
         			alert("날짜별 신청현황을 클릭하시셔서 예약일시를 선택하셔야 예약을 하실 수 있습니다.");	
         		} else if (!agreeResult) {
         			alert("약관에 모두 동의를 하셔야 예약을 하실 수 있습니다.");
+        		}else {
+        			$("#form-reservation").submit();
         		}
         	}
         });
@@ -817,8 +613,7 @@
 		3. 비밀번호
 		4. 약관 동의시	*/
 	$(function() {
-		var inputs = ["phone-name", "phone-no", "booking-se", "booking-time"]
-		var pwds = ["booking-pwd", "re-booking-pwd"];
+		var inputs = ["booking-se", "booking-time"]
 		var agree = ["privacy-collection", "privacy-offer", "alarm-reception"];
 		function validate() {
 			// input
@@ -829,12 +624,6 @@
 				}
 				return true;
 			})
-			// 패스워드
-			var pwdResult = pwds.every(function(id) {
-				var val = $("#" + id).val();
-				if (val && val.length == 4) return true;
-				return false;	
-			});
 
 			// 동의
 			var agreeResult = agree.every(function(id) {
@@ -842,7 +631,7 @@
 				return checked;
 			});
 			
-			if (inputResult && pwdResult && agreeResult)  {
+			if (inputResult && agreeResult)  {
 				$("#btn-booking").removeClass("disabled");
 			} else {
 				$("#btn-booking").addClass("disabled");
@@ -850,19 +639,6 @@
 		}
 		$.validate = validate;
 		
-		$("#booking-pwd, #re-booking-pwd").on("input", function(e) {
-			var key = e.originalEvent.keyCode;
-			var val = $(this).val();
-			$(this).val(val.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, ''));
-			// 패스워드 처리후 validation
-			$.validate();
-		});
-		$("#booking-pwd, #re-booking-pwd").on("keypress", function(e) {
-			var key = e.originalEvent.keyCode;
-			if (key < 48 || key > 57) {
-				return false;
-			}
-		});
 		
 		$(".agreement-box").find("input").on("change", function() {
 			var checked = $(this).prop("checked");
@@ -883,7 +659,8 @@
 		$("#page-expired").show();
 	});
 	$("#btn-to-reserve").on("click", function(){
-		location.href="https://reserve.opencheongwadae.kr/"
+		
+		location.href="reservation.jsp";
 	});
 </script>
 		</div>

@@ -48,18 +48,21 @@
 	}else {
 		int reserve_num = reserveInfo.getReserve_num();
 		int company = reserveInfo.getCompany();
-		String see_date = reserveInfo.getSee_date();
+		int see_date = reserveInfo.getSee_date();
 		int see_time = reserveInfo.getSee_time();
-		String req_date = reserveInfo.getReq_date();
+		
 		String time = "";
+		String timeline ="";
+		if(see_time == 1) {time="09:00 ~ 10:30"; timeline="0900";}
+		else if(see_time == 2) {time="10:30 ~ 12:00"; timeline="1030";}
+		else if(see_time == 3) {time="12:00 ~ 13:30"; timeline="1200";}
+		else if(see_time == 4) {time="13:30 ~ 15:00"; timeline="1330";}
+		else if(see_time == 5) {time="15:00 ~ 16:30"; timeline="1500";}
+		else if(see_time == 6) {time="16:30 ~ 18:00"; timeline="1630";}
 		
-		if(see_time == 1) time="09:00 ~ 10:30";
-		else if(see_time == 2) time="10:30 ~ 12:00";
-		else if(see_time == 3) time="12:00 ~ 13:30";
-		else if(see_time == 4) time="13:30 ~ 15:00";
-		else if(see_time == 5) time="15:00 ~ 16:30";
-		else if(see_time == 6) time="16:30 ~ 18:00";
-		
+		String req_date = reserveInfo.getReq_date();
+		String resault = String.format("%04d", reserve_num);
+		String reserveNumber = see_date + timeline + resault;
 				
 %>
 		<div id="container">
@@ -125,7 +128,7 @@
 								<div class="inner-list">
 									<label for="booking-no" class="input-tit">예약번호</label> <input
 										type="text" name="booking-no" id="booking-no" readonly=""
-										value="<%=reserve_num%>">
+										value="<%=reserveNumber%>">
 								</div>
 								<div class="inner-list">
 									<label for="apply-dt" class="input-tit">신청일자</label> <input

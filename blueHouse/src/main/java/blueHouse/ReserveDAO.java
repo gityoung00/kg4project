@@ -23,12 +23,12 @@ public class ReserveDAO {
 		PreparedStatement ps = null;
 		try {
 			ps = con.prepareStatement(sql);
-			ps.setString(1, reserve.getId());
-			ps.setInt(2, reserve.getCompany());
-			ps.setString(3, reserve.getSee_date());
-			ps.setInt(4, reserve.getSee_time());
-			ps.setString(5, reserve.getReq_date());
-			ps.setInt(6, reserve.getReserve_num());
+			ps.setInt(1, reserve.getReserve_num());
+			ps.setString(2, reserve.getId());
+			ps.setInt(3, reserve.getCompany());
+			ps.setInt(4, reserve.getSee_date());
+			ps.setInt(5, reserve.getSee_time());
+			ps.setString(6, reserve.getReq_date());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -43,21 +43,21 @@ public class ReserveDAO {
 	}
 
 	public ReserveDTO selectId(String id) {
-		
+		System.out.println("넘어온아이디:"+ id);
 		String sql = "SELECT * FROM reserve WHERE id=?";
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
 			ps = con.prepareStatement(sql);
-			System.out.println(ps);
 			ps.setString(1, id);
 			rs = ps.executeQuery();
 			if (rs.next()) {
+				System.out.print("야 된다 근데 왜?");
 				ReserveDTO reserve = new ReserveDTO();
-				reserve.setId(rs.getString("id"));
 				reserve.setReserve_num(rs.getInt("reserve_num"));
+				reserve.setId(rs.getString("id"));
 				reserve.setCompany(rs.getInt("company"));
-				reserve.setSee_date(rs.getString("see_date"));
+				reserve.setSee_date(rs.getInt("see_date"));
 				reserve.setSee_time(rs.getInt("see_time"));
 				reserve.setReq_date(rs.getString("req_date"));
 				System.out.println(reserve);
@@ -87,8 +87,10 @@ public class ReserveDAO {
 			ps.setInt(1, date);
 			ps.setInt(2, time);
 			rs = ps.executeQuery();
-			int sum = rs.getInt("sum(company)");
-			return sum;
+			if (rs.next()) {
+				int sum = rs.getInt("sum(company)");
+				return sum;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -100,7 +102,7 @@ public class ReserveDAO {
 			}
 		}
 		
-		return 9999;
+		return 0;
 	}
 	
 	public void delete(ReserveDTO reserve) {
