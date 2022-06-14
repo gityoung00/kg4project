@@ -44,7 +44,7 @@ body {
 	font-size: 35px;
 	font-weight: bold;
 	position: relative;
-	left: 265px;
+	left: 250px;
 	top: 40px;
 }
 
@@ -106,15 +106,14 @@ td .register-cancel {
 <script src="register.js"></script>
 <div id="member-page">
 	<div id="member-container">
-			<div class="member-title">아이디 찾기</div>
-			<form action="idFindSvc.jsp" method="post">
+			<div class="member-title">비밀번호 찾기</div>
+			<form action="pwFindSvc.jsp" method="post">
 				<table class="register-input">
 					<tr>
-						<td><label>이름</label><br> 
-							<input type="text" tabIndex="4" onkeydown="return tab(this, event)" 
-							name="name" id="name" class="reigster-name"
-							onchange="nameCheck()"><br> <span id="nameAlert"></span>
-						</td>
+						<td><label>아이디</label><br> <input
+							type="text" tabIndex="1" onkeydown="return tab(this, event)"
+							name="id" id="id" class="reigster-id" onchange="idCheck()"><br>
+							<span id="idAlert"></span></td>
 					</tr>
 					<tr>
 						<td><label>이메일</label><br> 
@@ -146,28 +145,28 @@ td .register-cancel {
 <script>
 	
 	$('#sending').click(function() {
-		var name = $('#name').val();
+		var id = $('#id').val();
 		var email = $('#email').val();
-		var nameCheck = $('#nameAlert').val();
+		var idCheck = $('#idAlert').val();
 		var emailCheck = $('#emailAlert').val();
 		
-		console.log(name);
-		
-		if(name=="" || email=="") {
-			alert('이름과 이메일을 입력해 주세요');
+		if(id=="" || email=="") {
+			alert('아이디와 이메일을 입력해 주세요');
 			return;
 		}
-		if(emailCheck !="" || nameCheck !="") {
-			alert('이름과 이메일을 정확하게 입력해 주세요.');
+		if(emailCheck !="" || idCheck !="") {
+			alert('아이디와 이메일을 정확하게 입력해 주세요.');
 			return;
 		}
 		
-		$('#sending').val('아이디 찾기');
+		$('#sending').val('비밀번호 찾기');
 	})
 	
 </script>
 
 <%@include file="../footer.jsp" %>
+
+
 
 
 
