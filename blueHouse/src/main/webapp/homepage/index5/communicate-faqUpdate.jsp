@@ -6,7 +6,7 @@
 <%@include file="/header.jsp"%>
 <%
 	id = (String)session.getAttribute("id");
-	String n = request.getParameter("num");
+	String n = request.getParameter("num"); 
 	
 	if(id == null || id == ""){ 
 		response.sendRedirect("/blueHouse/member/login.jsp");
@@ -51,7 +51,7 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="communicate-faqSvc.jsp?num=<%=num %>" class="board-form plani-form" method="post" accept-charset="utf-8">
+					<form action="communicate-faqUpdateSvc.jsp?num=<%=num %>" class="board-form plani-form" method="post" accept-charset="utf-8">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
 						<input type="hidden" name="redirect" value="communicate-faq/index" style="display: none;"> 

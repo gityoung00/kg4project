@@ -30,7 +30,7 @@
 	
 	String name = (String)session.getAttribute("name");
 	String content = request.getParameter("content");
-	
+	String title = request.getParameter("title");
 	if(content == null || content == ""){
 		out.print("<script>alert('내용을 써주세요!'); history.back(); </script>");
 		return ;
@@ -39,10 +39,11 @@
 	NoticeDAO noticeDao = new NoticeDAO();
 	boardDTO boardDto = noticeDao.selectNum(num);
 	boardDto.setContent(content);
+	boardDto.setTitle(title);
 	boardDto.setNum(num);
 	
 	
 	noticeDao.update(boardDto); 
 	
 %>
-<script>alert('공지사항이 수정이 완료 되었습니다'); location.href='make-reviewView.jsp?num=<%=boardDto.getNum()%>';</script>
+<script>alert('공지사항이 수정이 완료 되었습니다'); location.href='communicate-noticeView.jsp?num=<%=boardDto.getNum()%>';</script>

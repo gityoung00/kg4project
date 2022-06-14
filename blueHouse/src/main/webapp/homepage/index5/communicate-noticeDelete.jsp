@@ -16,10 +16,7 @@
 		response.sendRedirect("/blueHouse/member/login.jsp");
 		return;
 	}
-	if(id.equals(boardDto.getId()) == false) {
-		response.sendRedirect("communicate-notice.jsp");
-		return; 
-	}
+
 	noticeDao.delete(num);
 %>
 <script>alert('공지가 삭제되었습니다.'); location.href="communicate-notice.jsp";</script>

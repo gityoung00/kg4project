@@ -52,7 +52,7 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="communicate-noticeSvc.jsp?num=<%=num %>" class="board-form plani-form" method="post" accept-charset="utf-8">
+					<form action="communicate-noticeUpdateSvc.jsp?num=<%=num %>" class="board-form plani-form" method="post" accept-charset="utf-8">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
 						<input type="hidden" name="redirect" value="communicate-notice/index" style="display: none;"> 
