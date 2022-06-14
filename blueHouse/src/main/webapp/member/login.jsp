@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="/header.jsp" %>
+<%@include file="/header.jsp"%>
 <style>
 body {
 	margin: 0px;
@@ -102,8 +102,6 @@ a:active {
 	color: black;
 	text-decoration: none;
 }
-
-
 </style>
 
 <body>
@@ -113,14 +111,13 @@ a:active {
 			<form action="loginSvc.jsp" method="post" id="f">
 				<table class="login-input">
 					<tr>
-						<td colspan="2"><input type="text" name="id" id="id" class="login-id"
-							placeholder="아이디 입력"></td>
+						<td colspan="2"><input type="text" name="id" id="id"
+							class="login-id" placeholder="아이디 입력"></td>
 					</tr>
 					<tr>
 						<td colspan="2"><input type="password" name="pw" id="pw"
 							class="login-pw" placeholder="비밀번호 입력"></td>
 					</tr>
-
 					<tr>
 						<td><input type="submit" class="login-submit" value="로그인"></td>
 						<td><input type="button" class="login-register" value="회원가입"
@@ -130,15 +127,10 @@ a:active {
 			</form>
 
 			<div class="member-find">
-				<a href="idFind.jsp">아이디 찾기</a> | <a href="pwFind">비밀번호 찾기</a>
+				<a href="idFind.jsp">아이디 찾기</a> | <a href="pwFind.jsp">비밀번호 찾기</a>
 			</div>
 
 		</div>
 	</div>
 
-<%@include file="/footer.jsp" %>
-	
-	
-	
-	
-	
+	<%@include file="/footer.jsp"%>
