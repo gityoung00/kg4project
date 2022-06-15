@@ -77,6 +77,7 @@
 </style>
 <link href="/blueHouse/css/8d48db471e9f82df7eec79bd2ba507b3.css"
 	rel="stylesheet" type="text/css" charset="UTF-8" media="all">
+	<!-- <link href="https://www.opencheongwadae.kr/_files/minify/8d48db471e9f82df7eec79bd2ba507b3.css?q=2022-06-14" rel="stylesheet" type="text/css" charset="UTF-8" media="all"> -->
 <link rel="canonical" href="https://www.opencheongwadae.kr/main">
 <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"website","@id":"#website","url":"https:\/\/www.opencheongwadae.kr\/main","name":"\uba54\uc778 | \uccad\uc640\ub300, \uad6d\ubbfc \ud488\uc73c\ub85c"}</script>
 <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","@id":"#organization","url":"https:\/\/www.opencheongwadae.kr\/main","name":"\uba54\uc778 | \uccad\uc640\ub300, \uad6d\ubbfc \ud488\uc73c\ub85c"}</script>
@@ -133,7 +134,7 @@
 </head>
 <body
 	style="cursor: url(&quot;null&quot;), default; overflow: hidden; height: 100%;"
-	class="fp-viewing-0">
+	class="">
 	<p id="skip_nav">
 		<a href="#contents">본문으로 바로가기</a>
 	</p>
@@ -141,7 +142,7 @@
 	<div class="mw" id="mw_temp" style="display: none;"></div>
 	<div id="wrap">
 		<!-- header -->
-		<header id="header" class="start">
+		<header id="header" class="">
 			<div class="header_wrap">
 				<h1 id="logo">
 					<a href="/blueHouse/test.jsp"> <img src="/blueHouse/img/logo.png"
@@ -405,10 +406,10 @@
 					style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px);">
 					<div id="visual"
 						class="section section0 fp-section active fp-table fp-completely"
-						data-fp-styles="null" style="height: 1252px;">
-						<div class="fp-tableCell" style="height: 1252px;">
+						data-fp-styles="null" style="">
+						<div class="fp-tableCell" style="">
 							<div class="visual_wrap">
-								<div class="v_item item1 on">
+								<div class="v_item item1" style="">
 									<div class="txt_box">
 										<p class="s_tit tLine2">2022. 05. 10.</p>
 										<p class="v_tit">
@@ -492,8 +493,8 @@
 					</div>
 
 					<div class="section section1 fp-section fp-table"
-						data-fp-styles="null" style="height: 1252px;">
-						<div class="fp-tableCell" style="height: 1252px;">
+						data-fp-styles="null" style="">
+						<div class="fp-tableCell" style="">
 							<div class="m_container">
 								<h3 class="m_title">
 									과거와 현재,<br> 미래를 관통하는 역사문화 공간
@@ -537,8 +538,8 @@
 					</div>
 
 					<div class="section section2 fp-section fp-table"
-						data-fp-styles="null" style="height: 1252px;">
-						<div class="fp-tableCell" style="height: 1252px;">
+						data-fp-styles="null" style="">
+						<div class="fp-tableCell" style="">
 							<div class="m_container">
 								<div class="left_box">
 									<h3 class="m_title">
@@ -760,10 +761,11 @@
 							</div>
 						</div>
 					</div>
+					
 
 					<div class="section section3 fp-section fp-table"
-						data-fp-styles="null" style="height: 1252px;">
-						<div class="fp-tableCell" style="height: 1252px;">
+						data-fp-styles="null" style="">
+						<div class="fp-tableCell" style="">
 							<div class="m_container">
 								<h3 class="m_title">청와대에서 북악산까지</h3>
 								<p class="m_txt">
@@ -771,7 +773,7 @@
 									휴식하고, 때로는 역사와 문화를 탐방하시기 바랍니다.
 								</p>
 								<ul class="tab_list">
-									<li><a href="http://localhost:8085/blueHouse/homepage/index4/trail-relic.jsp" class="inner">
+									<li class="on"><a href="http://localhost:8085/blueHouse/homepage/index4/trail-relic.jsp" class="inner">
 											<div class="thumb">
 												<span><img
 													src="/blueHouse/img/homepage/section3_thumb05.png" alt=""></span>
@@ -780,20 +782,17 @@
 												<strong>등산로 유적 탐방하기</strong> <i class="xi-plus-thin"></i>
 											</div>
 									</a></li>
-									<li><a href="http://localhost:8085/blueHouse/homepage/index4/trail-course.jsp" class="inner">
+									<li class=""><a href="http://localhost:8085/blueHouse/homepage/index4/trail-course.jsp" class="inner">
 											<div class="thumb">
 												<span> <img
 													src="/blueHouse/img/homepage/section3_thumb06.png" alt="">
-													<!--<i class="blur">
-           <span><b class="xi-maker"></b><br>곧 공개 됩니다.</span>
-          </i>-->
 												</span>
 											</div>
 											<div class="box">
 												<strong>등산로 추천코스 살펴보기</strong> <i class="xi-plus-thin"></i>
 											</div>
 									</a></li>
-									<li><a href="http://localhost:8085/blueHouse/homepage/index4/trail-application.jsp" class="inner">
+									<li class=""><a href="http://localhost:8085/blueHouse/homepage/index4/trail-application.jsp" class="inner">
 											<div class="thumb">
 												<span><img
 													src="/blueHouse/img/homepage/section3_thumb07.png" alt=""></span>
@@ -802,24 +801,14 @@
 												<strong>앱 다운로드</strong> <i class="xi-plus-thin"></i>
 											</div>
 									</a></li>
-									<!--<li>
-       <a href="" class="inner">
-        <div class="thumb"><span><img src="../img/main/section3_thumb02.png" alt=""></span></div>
-        <div class="box">
-         <strong>등산로 개방 개요</strong>
-         <p>청와대 일대와 북악산 전면 개방 효과가 생겨 <br>휴식, 산책, 역사탐방 등이 가능해집니다.</p>
-         <i class="xi-plus-thin"></i>
-        </div>
-       </a>
-      </li>-->
 								</ul>
 							</div>
 						</div>
 					</div>
 
 					<div class="section section4 fp-section fp-table"
-						data-fp-styles="null" style="height: 1252px;">
-						<div class="fp-tableCell" style="height: 1252px;">
+						data-fp-styles="null" style="">
+						<div class="fp-tableCell" style="">
 							<div class="m_container">
 								<h5 class="m_title">함께 나누는 이야기</h5>
 								<ul class="tab_list">
@@ -1104,7 +1093,7 @@
 </footer>-->
 					<footer id="footer_section"
 						class="footer section fp-auto-height fp-section fp-table active-start fp-completely"
-						data-fp-styles="null" style="height: 1252px;">
+						data-fp-styles="null" style="">
 						<div class="footer_wrap">
 							<div id="siteinfo">
 								<a class="logo"><img src="/blueHouse/img/logo_f2.png"
