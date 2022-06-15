@@ -1,3 +1,4 @@
+<%@page import="java.io.File"%>
 <%@page import="blueHouse.NoticeDAO"%>
 <%@page import="blueHouse.boardDTO"%>
 <%@page import="blueHouse.ReviewDAO"%>
@@ -10,6 +11,12 @@
 	
 	NoticeDAO noticeDao = new NoticeDAO();
 	boardDTO boardDto = noticeDao.selectNum(num);
+	
+	String location = "/Users/gayeonkim/blueHouseDB/notice/"+boardDto.getFile_name();
+	File file = new File(location);
+	if(file.exists()) {
+		file.delete();
+	}
 	
 	String id = (String)session.getAttribute("id");
 	if(id == null || id == ""){
