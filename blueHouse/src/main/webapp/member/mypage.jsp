@@ -132,7 +132,7 @@ a:active {
 					<tr>
 						
 						<td><input type="button" value="나가기"
-							onclick="location.href='main.jsp'"></td>
+							onclick="location.href='/blueHouse/homepage/main.jsp'"></td>
 					</tr>
 				</table>
 
