@@ -1,3 +1,5 @@
+<%@page import="java.io.File"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@page import="blueHouse.NoticeDAO"%>
 <%@page import="blueHouse.boardDTO"%>
 <%@page import="blueHouse.ReviewDAO"%>
@@ -10,6 +12,19 @@
 	request.setCharacterEncoding("UTF-8");
 
 	String id = (String)session.getAttribute("id");
+	//기존파일이름
+	String file_Name = request.getParameter("fileName");
+	System.out.print(file_Name);
+	
+	String location = "/Users/gayeonkim/blueHouseDB/notice/";
+	File file = new File(location);
+	MultipartRequest multi = new MultipartRequest(request, location, 1024 * 1024 * 20 ,"utf-8");
+
+	String title = multi.getParameter("title");
+	String content = multi.getParameter("content");
+	//새로 업로드한 파일
+	String upfile = multi.getFilesystemName("upfile");
+	
 	if(id == null || id == ""){
 		response.sendRedirect("/blueHouse/member/login.jsp");
 		return;
@@ -28,9 +43,7 @@
 		return;
 	}
 	
-	String name = (String)session.getAttribute("name");
-	String content = request.getParameter("content");
-	String title = request.getParameter("title");
+	
 	if(content == null || content == ""){
 		out.print("<script>alert('내용을 써주세요!'); history.back(); </script>");
 		return ;
@@ -41,6 +54,15 @@
 	boardDto.setContent(content);
 	boardDto.setTitle(title);
 	boardDto.setNum(num);
+	if(upfile != "") {
+		boardDto.setFile_name(upfile);
+		File file2 = new File(location + file_Name);
+		System.out.println(file2);
+		if(file2.exists()) {
+			file2.delete();
+		}
+	
+	}
 	
 	
 	noticeDao.update(boardDto); 

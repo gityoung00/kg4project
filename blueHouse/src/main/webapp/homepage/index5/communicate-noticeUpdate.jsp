@@ -52,7 +52,7 @@
 			</div>
 			<div id="contents_body">
 				<div class="example_wrap">
-					<form action="communicate-noticeUpdateSvc.jsp?num=<%=num %>" class="board-form plani-form" method="post" accept-charset="utf-8">
+					<form action="communicate-noticeUpdateSvc.jsp?num=<%=num %>&fileName=<%=boardDto.getFile_name() %>" class="board-form plani-form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 						<div class="alert-error"></div>
 						<div class="alert-success"></div>
 						<input type="hidden" name="redirect" value="communicate-notice/index" style="display: none;"> 
@@ -73,6 +73,14 @@
 									<tr>
 										<th>내용</th>
 										<td><textarea name="content" style="height: 300px; font-size: 18px"><%=boardDto.getContent() %></textarea></td>
+									</tr>
+									<tr>
+										<th>첨부파일</th>
+										<td style="text-align:left; padding-left:90px;">
+											<%=boardDto.getFile_name() %><br>
+											<input type="file" name="upfile">
+											
+										</td>
 									</tr>
 								</table>
 								<div align="center">

@@ -82,6 +82,11 @@ if (boardDto == null) {
 												<td><textarea name="content"
 														style="height: 300px; font-size: 18px" disabled><%=boardDto.getContent()%></textarea></td>
 											</tr>
+											<tr>
+												<th>첨부파일</th>
+												<td style="text-align:left; padding-left:90px;"><a href="fileDL.jsp?fileName=<%=boardDto.getFile_name() %>"><%=boardDto.getFile_name() %></a></td>
+											
+											</tr>
 										</table>
 
 										<div class="request plani-board-lists">

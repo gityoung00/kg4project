@@ -12,7 +12,7 @@
 				<!-- 컨텐츠 내용이 들어갑니다 -->
 				<div class="example_wrap"></div>
 				<form action="communicate-noticeWriteSvc.jsp"
-					class="save-form plani-form" method="post" accept-charset="utf-8">
+					class="save-form plani-form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 					<input type="hidden" name="csrf_test_name"
 						value="38f45fc2b6fda09731ea90c73e9d5ffb" style="display: none;">
 					<input type="hidden" name="history" value="/make-review/form"

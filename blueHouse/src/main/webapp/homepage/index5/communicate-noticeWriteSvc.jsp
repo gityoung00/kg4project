@@ -12,8 +12,16 @@
 request.setCharacterEncoding("utf-8");
 
 String id = (String) session.getAttribute("id");
-String title = request.getParameter("title");
-String content = request.getParameter("content");
+
+String location = "/Users/gayeonkim/blueHouseDB/notice/";
+File file = new File(location);
+MultipartRequest multi = new MultipartRequest(request, location, 1024 * 1024 * 20 ,"utf-8");
+
+String title = multi.getParameter("title");
+String content = multi.getParameter("content");
+String upfile = multi.getFilesystemName("upfile");
+
+
 
 if (id == null || id == "") {
 	out.print("<script>alert(' 로그인을 해주세요.'); history.back();</script>");
@@ -23,6 +31,7 @@ if (id.equals("admin")) {
 	boardDTO boardDto = new boardDTO();
 	boardDto.setTitle(title);
 	boardDto.setContent(content);
+	boardDto.setFile_name(upfile);
 
 	NoticeDAO noticeDao = new NoticeDAO();
 	noticeDao.write(boardDto);
