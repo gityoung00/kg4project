@@ -19,7 +19,7 @@
 	
 	ReserveDAO reserveDao = new ReserveDAO();
 	ReserveDTO myReserve = reserveDao.selectId(id);
-	System.out.print(myReserve.getSee_date() + " // " + today);
+	
 	if(myReserve != null && today < myReserve.getSee_date()) {
 		out.print("<script>alert('예약 정보가 존재합니다.'); history.back();</script>");
 	}

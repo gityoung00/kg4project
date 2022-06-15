@@ -22,7 +22,7 @@
  	
  	if(date == 0 || timeOf == null || idCheck == null || company == 0) {
  		out.print("<script>alert('예약 정보를 다시 확인해 주세요.'); history.back();</script>");
- 		return;
+ 		return; 
  	}
  		
  
