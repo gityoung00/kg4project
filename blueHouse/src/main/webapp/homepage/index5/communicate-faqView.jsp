@@ -79,7 +79,7 @@ if (boardDto == null) {
 										<div class="request plani-board-lists">
 											<div align="center">
 												<input type="submit" value="목록" id="idea_write_btn"
-													onclick="location.href='communicate-notice.jsp'">&nbsp;
+													onclick="location.href='communicate-faq.jsp'">&nbsp;
 												<%
 												if (id.equals("admin")) {
 												%>

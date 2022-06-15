@@ -4,6 +4,7 @@
 <%@page import="blueHouse.boardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@include file="/header.jsp"%>
 <style>
 
 
@@ -12,10 +13,9 @@
 	background-color: #2f3337;
 	color: white;
 	font-size: 13px;
-	width: 80px;
 	height: 35px;
 	padding: 8px 10px 15px 10px;
-	margin-top: 15px;
+	margin-top: 5px;
 }
 
 </style>
@@ -53,7 +53,7 @@ int size = (boards.size() - ((nowpage - 1) * block));
 
 System.out.println("pageNumber" + pageNumber);
 %>
-<%@include file="/header.jsp"%>
+
 <main id="main">
 	<div class="main_wrap">
 		<div id="contents">
@@ -61,7 +61,6 @@ System.out.println("pageNumber" + pageNumber);
 				<h1 id="contents_title">자주하는 질문</h1>
 			</div>
 			<div id="contents_body">
-				<!-- 컨텐츠 내용이 들어갑니다 -->
 				<div class="example_wrap">
 					<form action="communicate-faq.jsp?mode=search"
 						class="board-form plani-form" method="post" accept-charset="utf-8">
@@ -163,14 +162,14 @@ System.out.println("pageNumber" + pageNumber);
  	+ search_keyword + "'><span class='hidden'>다음페이지</span><i class='xi-angle-right-thin'></i></a></li>");
  }
  %>
-										<li class="last"><a
-											href='communicate-faq.jsp?page=<%=totalpage%>'><span
-												class="hidden">마지막으로</span> <i class="xi-angle-right-thin"></i>
-												<i class="xi-angle-right-thin"></i></a></li>
+										<li class="last">
+											<a href='communicate-faq.jsp?page=<%=totalpage %>'><span class="hidden">마지막으로</span>
+											<i class="xi-angle-right-thin"></i>
+											<i class="xi-angle-right-thin"></i></a>
+										</li>
 									</ul>
 								</div>
 								<div class="label-button"></div>
-								</table>
 
 							</div>
 					</form>
