@@ -812,7 +812,7 @@
 							<div class="m_container">
 								<h5 class="m_title">함께 나누는 이야기</h5>
 								<ul class="tab_list">
-									<li class="active"><a href="#s4_conts4"><span>관람후기</span></a></li>
+									<li class="active"><a href="#"><span>관람후기</span></a></li>
 									<li><a href="#"><span>사진</span></a></li>
 									<li><a href="#"><span>영상</span></a></li>
 									<li><a href="#"><span>카드뉴스</span></a></li>
