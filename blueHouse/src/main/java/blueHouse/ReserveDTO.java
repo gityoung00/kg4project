@@ -8,7 +8,14 @@ public class ReserveDTO {
 	private int see_date;
 	private int see_time;
 	private String req_date;
+	private String name;
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public int getReserve_num() {
 		return reserve_num;
 	}

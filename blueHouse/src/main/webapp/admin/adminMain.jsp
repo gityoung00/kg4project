@@ -94,6 +94,7 @@ table img {
     padding: 50px;
     margin-bottom: 40px;
     display: flex;
+    min-width: 1100px;
 }
 #inner1 {
 	margin: auto;
