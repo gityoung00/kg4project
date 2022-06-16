@@ -124,6 +124,16 @@ a:active {
 							onclick="location.href='register.jsp'"></td>
 					</tr>
 				</table>
+				<%
+					String code = request.getParameter("code");
+					System.out.println("login:"+code);
+					
+					if(code != null && code.equals("5050")){
+				%>
+					<input type="hidden" name="code" value="5050">
+				<%}else {%>	
+				<input type="hidden" name="code" value="">
+				<%} %>
 			</form>
 
 			<div class="member-find">

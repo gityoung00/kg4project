@@ -147,7 +147,7 @@
 								</ul>
 							</div>
 						</div>
-						<a id="btn-close" href="/blueHouse/test.jsp"
+						<a id="btn-close" href="/blueHouse/reserveMain.jsp"
 							class="btn-bottom compelte-btn">확인</a>
 					</div>
 				</div>

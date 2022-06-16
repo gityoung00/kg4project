@@ -423,7 +423,7 @@ img {
         }
         
         loginHref = function() {
-        	var url = "/blueHouse/member/login.jsp";    
+        	var url = "/blueHouse/member/login.jsp?code=5050";    
         	$(location).attr('href',url);
         }
 	</script>
